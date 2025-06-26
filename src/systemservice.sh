@@ -7,7 +7,7 @@ echo
 
 while true;do
 
-read -p " :: Do you Wanna enable Network services? (y/n): " service 
+read -rp " :: Do you Wanna enable Network services? (y/n): " service 
 
 case "$service" in 
 	[y]*)
@@ -34,7 +34,7 @@ echo
 
 while true;do
 
-read -p " :: Do you wanna enable Bluetooth services? (y/n): " Bluetooth
+read -rp " :: Do you wanna enable Bluetooth services? (y/n): " Bluetooth
 
 case "$Bluetooth" in
   [y]*)

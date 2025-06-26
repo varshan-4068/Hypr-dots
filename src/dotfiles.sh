@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 files(){
 
@@ -26,7 +27,7 @@ while true;do
 
 echo
 
-read -p " :: Do u wanna install Dotfiles and some other files? (y/n): " dot
+read -rp " :: Do u wanna install Dotfiles and some other files? (y/n): " dot
 
 case "$dot" in 
 [y]*)
@@ -36,19 +37,19 @@ case "$dot" in
 	usr=/usr/bin
 	bash=mybash/
 
-	cd Hypr-dots/
+	cd Hyprland-Arch/ || return
 	echo
-	echo " :: Entered the Hypr-dots Directory ::"
+	echo " :: Entered the Hyprland-Arch Directory ::"
 	echo
 	cp -r .config/ ~
-	cd conf/ 
+	cd conf/ || return
 	sudo cp -r pacman.conf spotify-launcher.conf /etc
 	cd ../
-	cd gtk/ 
+	cd gtk/ || return
 	cp -r gtk-3.0/ gtk-4.0/ nwg-look/ $conf
 	cp .gtkrc-2.0 ~
 	cd ../
-	cd $bash
+	cd $bash || return
 	cp starship.toml $conf
 	cp .bashrc .bash_profile ~
 	cd ../
@@ -68,17 +69,17 @@ case "$dot" in
 	echo " :: Chmoding the Executable files.. ::"
 	echo 
 	echo 
-	cd src/
+	cd src/ || return
 	sudo cp rofi-power-menu $usr
 	sudo chmod +x restore.sh 
 	sudo chmod +x theme.sh 
 	sudo chmod +x icon.sh
-	cd $conf/waybar/scripts/
+	cd $conf/waybar/scripts/ || return
 	sudo chmod +x ani-cli.sh aur.sh disk_script.sh pacman.sh timeshift.sh waybar.sh
 	waybar &
-	cd $conf/hypr 
+	cd $conf/hypr || return
 	sudo chmod +x float.sh
-	cd ~
+	cd ~ || return
 	sudo chmod +x $usr/rofi-power-menu
 	echo " :: Chmoding the Executable files was Successfull"
 	sleep 0.4
@@ -111,29 +112,29 @@ while true;do
 		mkdir ~/.config/rofi
 	fi
 
-	cd $my_dir
+	cd $my_dir || return
 
 	my_file=config.rasi
 
 
-	cd themes/
+	cd themes/ || return
 
 	echo
 
-	read -p " Do u wanna Install Rofi With Image? (y/n): " image
+	read -rp " Do u wanna Install Rofi With Image? (y/n): " image
 
 	case "$image" in 
 		[y]*)
 			if [ -f $my_file ];then 
 			 rm $my_file
 			fi
-			cd rofi-image-style
+			cd rofi-image-style || return
 			cp $my_file $my_dir
 			clear 
 			echo " :: Successfully Updated the Theme ::"
 			sleep 0.5 
 			clear
-			cd ~
+			cd ~ || return
 			break 
 			;;
 		[n]*)
@@ -154,7 +155,7 @@ while true;do
 	echo 
 	echo 
 
-	read -p " Do u wanna Install Rofi Without Image? (y/n): " rofi
+	read -rp " Do u wanna Install Rofi Without Image? (y/n): " rofi
 
 	case "$rofi" in
 		[y]*)	
@@ -163,9 +164,9 @@ while true;do
 			if [ -f $my_file ];then 
 			 rm $my_file
 			fi
-			cd $my_dir
-			cd themes/
-			cd rofi-style
+			cd $my_dir || return
+			cd themes/ || return
+			cd rofi-style || return
 			cp $my_file $my_dir
 			clear 
 			echo " :: Successfully Updated the Theme ::"

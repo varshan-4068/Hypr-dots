@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 waybar(){
 
@@ -40,13 +41,13 @@ echo
 
 while true;do 
 
-	read -p " :: Type The Code of the preffered theme from the above list (d/w/n): " theme 
+	read -rp " :: Type The Code of the preffered theme from the above list (d/w/n): " theme 
 
 	case "$theme" in 
 		[d]*)
 			echo
-			cd ~/.config/waybar
-			cd ~/.config/waybar/'style.css collections'/'dark pink style'/
+			cd ~/.config/waybar || return
+			cd ~/.config/waybar/'style.css collections'/'dark pink style'/ || return
 			cp config style.css ~/.config/waybar
 			echo
 			echo " :: Successfully installed the configuration files of Dark pink theme ::"
@@ -56,11 +57,11 @@ while true;do
 		[w]*)
 			echo 
 			echo 
-			cd ~
-			cd ~/.config/waybar
-			cd ~/.config/waybar/'style.css collections'/'colourful waybar style'/
+			cd ~ || return
+			cd ~/.config/waybar || return
+			cd ~/.config/waybar/'style.css collections'/'colourful waybar style'/ || return
 			cp config style.css ~/.config/waybar
-			echo " :: Successfully installed the configuration files of Colourful Waybar Theme at $bar_dir ::"
+			echo " :: Successfully installed the configuration files of Colourful Waybar Theme ::"
 			sleep 0.5
 			break
 			;;

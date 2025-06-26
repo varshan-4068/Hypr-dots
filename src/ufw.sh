@@ -1,5 +1,6 @@
+#!/usr/bin/env bash
 
-ufw(){
+firewall(){
 
 	gum style \
 		--align center \
@@ -14,10 +15,10 @@ ufw(){
 											 \____||__|     \_/\_/  
 
 '
-
 }
+
 clear
-ufw
+firewall
 
 echo
 sudo ufw enable

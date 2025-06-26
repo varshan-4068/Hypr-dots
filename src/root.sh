@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 files(){
 
 	gum style \
@@ -25,17 +27,17 @@ while true;do
 
 echo
 
-read -p " :: Do u wanna install Dotfiles and some other files? (y/n): " dot
+read -rp " :: Do u wanna install Dotfiles and some other files in the root Directory ? (y/n): " dot
 
 case "$dot" in 
 [y]*)
 	
-	cd ~
-	cd Hypr-dots/
+	cd ~ || return
+	cd Hyprland-Arch/ || return
 	echo
-	echo " :: Entered the Hypr-dots Directory ::"
+	echo " :: Entered the Hyprland-Arch Directory ::"
 	echo
-	cd root/ 
+	cd root/ || return
 	sudo cp .bashrc .bash_profile /root
 	sudo cp -r nvim/ starship.toml alacritty/ /root/.config/
 	sudo mkdir -p .cache/ /root 

@@ -30,7 +30,7 @@ echo
 
 while true;do
 
-read -p " :: Do wanna restore your backups? (y/n): " backups
+read -rp " :: Do wanna restore your backups? (y/n): " backups
 
 case "$backups" in 
 

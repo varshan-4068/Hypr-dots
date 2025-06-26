@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 dependencies=(
 
@@ -117,7 +118,7 @@ dependencies=(
 
 while true;do
 
-read -p " :: Do u wanna install the dependencies? (y/n): " package
+read -rp " :: Do u wanna install the dependencies? (y/n): " package
 
 case "$package" in
 

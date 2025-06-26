@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 sddm(){
 
@@ -23,7 +24,7 @@ while true;do
 
 echo
 
-read -p " :: Do u wanna install sddm themes? (y/n): " lm
+read -rp " :: Do u wanna install sddm themes? (y/n): " lm
 
 case "$lm" in
 [y]*)
@@ -63,11 +64,11 @@ done
 
 while true;do
 
-read -p " :: Do u wanna delete the directory Hyprland-Arch/ that has been cloned to your system? (y/n): " del 
+read -rp " :: Do u wanna delete the directory Hyprland-Arch/ that has been cloned to your system? (y/n): " del 
 
 case "$del" in
  [y]*)
-		cd ~
+		cd ~ || return
 		sudo rm -r Hyprland-Arch/
 		echo 
 		echo

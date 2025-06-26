@@ -8,7 +8,7 @@ echo
 
 while true;do
 
-read -p " :: Do u wanna Install the Dracula Theme? (y/n): " Dracula
+read -rp " :: Do u wanna Install the Dracula Theme? (y/n): " Dracula
 
 case "$Dracula" in 
 	[y]*)

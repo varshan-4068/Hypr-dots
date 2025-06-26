@@ -1,10 +1,11 @@
+#!/usr/bin/env bash
 
 while true; do
 
 echo 
 echo 
 
-read -p " :: Do you wanna Install ani-cli? (y/n): " ani
+read -rp " :: Do you wanna Install ani-cli? (y/n): " ani
 
 case "$ani" in
 

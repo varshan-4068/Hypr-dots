@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 reboot(){
 
@@ -25,7 +26,7 @@ while true;do
 echo
 echo
 
-read -p " :: Do u wanna reboot ur system? (y/n): " choose
+read -rp " :: Do u wanna reboot ur system? (y/n): " choose
 
 case "$choose" in
 	[y]* )

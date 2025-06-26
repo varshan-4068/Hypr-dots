@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 boot(){
 
@@ -23,7 +24,7 @@ while true;do
 
 echo 
 
-read -p " :: Do u wanna install grub themes by ChrisTitusTech? (y/n): " chris
+read -rp " :: Do u wanna install grub themes by ChrisTitusTech? (y/n): " chris
 
 case "$chris" in
 	[y]*)
@@ -31,9 +32,9 @@ case "$chris" in
 		echo " :: Cloning Themes ::"
 		echo
 		git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes.git
-		cd Top-5-Bootloader-Themes
+		cd Top-5-Bootloader-Themes || return
 		sudo ./install.sh ## then select the theme u wanted u install 
-		cd ~
+		cd ~ || return
 		break 
 		;;
 	[n]*)

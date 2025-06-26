@@ -6,7 +6,7 @@ echo
 
 while true;do 
 
-	read -p " :: Do u Wanna Install the Dracula Icon Theme ? (y/n): " icons
+	read -rp " :: Do u Wanna Install the Dracula Icon Theme ? (y/n): " icons
 
 	case "$icons" in 
 		

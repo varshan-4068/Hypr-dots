@@ -1,8 +1,9 @@
+#!/usr/bin/env bash
 
 backup=~/backup/
 
 echo " :: Backuping your configs in $backup :: "
-cd ~
+cd ~ || return
 
 if [ -d $backup ]; then
 	sudo rm -r $backup

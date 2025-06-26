@@ -87,7 +87,7 @@ function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
+		builtin cd -- "$cwd" || return
 	fi
 	rm -f -- "$tmp"
 }
@@ -103,7 +103,7 @@ fi
 
 # whenever doing cd the ll will be executed too
 cd() {
-	builtin cd "$@"
+	builtin cd "$@" || return
 	ll
 }
 
