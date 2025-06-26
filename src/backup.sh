@@ -11,3 +11,26 @@ fi
 
 mkdir $backup
 cp -r ~/.config/ $backup
+cp -r ~/.local/ $backup
+
+while true;do
+
+gum confirm " Do u wanna snapshot your system with timeshift ?" && snapshot="yes" || snapshot="no"
+
+	case "$snapshot" in
+		[yes]*)
+			sudo timeshift --create --comments "Snapshot before installing the hyprland dotfiles.." --tags H
+			echo 
+			break
+			;;
+		[no]*)
+			break
+			;;
+		*)
+			echo 
+			echo 
+			echo " :: Either Select Yes or No :: "
+
+	esac
+
+done

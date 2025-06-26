@@ -30,30 +30,29 @@ echo
 
 while true;do
 
-read -rp " :: Do wanna restore your backups? (y/n): " backups
+gum confirm " :: Do wanna restore your backups? (y/n): " && backups="yes" || backups="no"
 
 case "$backups" in 
 
-	[y]*) 
+	yes) 
 		clear
 		echo 
 		echo " :: Restoring your Backup files :: "
 		cd ~
-		cp -r ~/backup/.config/ ~
+		sudo cp -r ~/backup/.config/ ~
+		sudo cp -r ~/backup/.local/ ~
 		rm -r backup/
+		echo
+		echo " :: Select the timeshift snapshot with H tag to backup.."
+		echo
+		sudo timeshift --restore
 		clear
 		break
 		;;
-	[n]*)
+	no)
 		clear
 		break
 		;;
-	*)
-		echo 
-		echo 
-		echo " :: Please answer yes or no ::"
-		echo 
-		echo 
 esac
 
 done
