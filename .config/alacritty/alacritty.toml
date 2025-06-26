@@ -1,0 +1,22 @@
+[window]
+padding.x = 10
+padding.y = 8
+dynamic_padding = true
+
+decorations = "none"
+
+[font]
+size = 10.8
+normal.family = "jetbrains mono nerd font"
+
+[cursor]
+style.shape = "Block"
+style.blinking = "off"
+thickness = 1.0
+
+[mouse]
+hide_when_typing = true 
+
+# [colors]
+# primary.foreground = "#cdd6f4"
+# primary.background = "#000000"

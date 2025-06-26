@@ -1,0 +1,143 @@
+* {
+    font: "cantarell bold 13";
+}
+
+configuration {
+    modi: "drun,filebrowser,run";
+		display-drun: "Apps";
+    display-filebrowser: "Files";
+    display-run: "Process";
+    show-icons: true;
+    hover-select:true;
+	  location : 0;
+}
+
+
+mode-switcher {
+    padding: 10px;
+		spacing: 10px;
+    background-color: #000000;
+		text-color: #f38ba8;
+		border: 0px solid;
+		border-color: #ff3361;
+		border-radius: 3px;
+		orientation: horizontal;
+}
+
+button {
+    border-radius:  0px;
+		padding: 5px;
+    background-color: #ff3361;
+    text-color:#000000;
+}
+
+button selected {
+    background-color: #0400ff;
+    text-color: #000000;
+}
+
+listbox {
+    children: ["inputbar","listview","mode-switcher"];
+    background-color: rgba(53,59,50,0.2);
+}
+
+listview {
+    columns: 1;
+    lines: 9;
+    scrollbar: true;
+		padding: 10px;
+		cycle: false;
+		layout: vertical;
+		spacing: 5px;
+		border: none;
+		reverse: false;
+}
+
+scrollbar{
+		background-color: #ff3361;
+		text-color: #cdd6f4;
+		handle-color: #cdd6f4;
+		handle-width: 8px;
+}
+
+window {
+    width:400px;
+    border-radius: 2px;
+		border: 2px solid;
+		border-color: #ff3361;
+    background-color: #000000CC;
+}
+
+inputbar {
+		enabled: true;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: #0400ff;
+		margin: 12px;
+    text-color:  #000000;
+    children:[ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled: true;
+    expand: false;
+    str: "";
+    background-color: transparent;
+}
+
+entry {
+		enabled: true;
+    text-color: #000000;
+    cursor: text;
+    placeholder: "Search";
+    placeholder-color: #000000;
+}
+
+mainbox {
+    spacing: 20px;
+		orientation: horizontal;
+    margin: 0;
+    padding: 8px;
+		children: ["listbox"];
+}
+
+element {
+    spacing: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: transparent;
+}
+
+element normal.normal {
+	background-color: transparent;
+	text-color: #cdd6f4;
+}
+
+element alternate.normal {
+	text-color: #cdd6f4;
+	background-color: transparent;
+}
+
+element selected.active {
+	background-color: transparent;
+	text-color: #ff3361;
+	border-radius: 2px;
+	border: 4px;
+	border-color: #ff3361;
+}
+
+element selected.normal {
+	background-color: #ff3361;
+	text-color: #000000;
+	border-radius: 2px;
+	border-color: #000000;
+	border: 3px solid;
+}
+
+error-message {
+    background-color: #ff3361;
+		text-color: #000000;
+}
+
+

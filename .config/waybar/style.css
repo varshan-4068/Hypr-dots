@@ -1,0 +1,100 @@
+* {
+  font: bold 11px JetBrainsMono Regular;
+}
+
+@import url("colors-waybar.css");
+
+window#waybar {
+  background-color: transparent;
+}
+
+#workspaces {
+  background: #000000;
+  margin: 10px 0px 0px 0px;
+  border-radius: 2px;
+}
+
+#workspaces button {
+  color: #cdd6f4;
+  box-shadow: none;
+  transition: none;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 2px;
+}
+
+#workspaces button:hover {
+  text-shadow: none;
+  background: none;
+}
+
+#workspaces button.active {
+  color: #000000;
+  background: @color1;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+  padding: 0 14px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-radius: 2px;
+}
+
+.modules-right {
+  padding-left: 4px;
+  background: #000000;
+  margin-right: 2px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.modules-left {
+  padding-left: 4px;
+  margin-left: 2px;
+  margin-top: 10px;
+  background: #000000;
+  border-radius: 4px;
+}
+
+#tray,
+#memory,
+#backlight,
+#custom-updates,
+#custom-updater,
+#hyprland-window,
+#wireplumber,
+#custom-temperature,
+#custom-timeshift,
+#custom-power,
+#battery,
+#cpu,
+#custom-disk {
+  color: #cdd6f4;
+  padding: 0px 5px;
+  margin-left: 5px;
+  margin-right: 7px;
+}
+
+#custom-theme,
+#clock {
+  color: #000000;
+  padding: 0px 5px;
+  margin-left: 4px;
+  background-color: @color1;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+tooltip {
+  background: linear-gradient(
+    0.28turn,
+    rgba(43, 59, 43, 0.2),
+    rgba(43, 59, 43, 0.9)
+  );
+}
+
+tooltip label {
+  color: #cdd6f4;
+  padding: 16px;
+  background-color: #000000;
+}

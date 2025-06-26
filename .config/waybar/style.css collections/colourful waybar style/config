@@ -1,0 +1,182 @@
+{
+	"layer": "top",
+	"position": "top",
+	"margin-top": 4,
+	"margin-left": 17,
+	"margin-right": 17,
+	
+	"modules-left": ["custom/theme","memory","custom/disk","cpu","custom/temperature","custom/ani","custom/seperator","tray",],
+	"modules-center": ["hyprland/workspaces",],
+	"modules-right": ["custom/updates","custom/updater","custom/timeshift","wireplumber","battery","backlight","clock","custom/power",],
+
+
+	"hyprland/workspaces": {
+			"on-scroll-up": "hyprctl dispatch workspace -1",
+			"on-scroll-down": "hyprctl dispatch workspace +1",
+			"format": "{icon}",
+			"format-icons": {
+				"1": "",
+				"2": "",
+				"3": "󰖳",
+				"4": "󰈹",
+				"5": "",
+				"6": "",
+				"7": "󰇮",
+				"8": "",
+			},
+			"persistent-workspaces": {
+				"*":[1,2,3,4,5]
+			},
+	},
+
+	"custom/seperator": {
+		"format": " | ",
+	},
+
+	"tray": {
+		"spacing": 10,
+	},
+
+	"custom/updates":{
+		"format": "<span color='#1e90ff'>  UR</span>  {} U",
+		"exec": "paru -Qu | wc -l",
+		"interval": 300,
+		"tooltip-format":"Arch User Repository" ,
+		"on-click": "alacritty -e bash -ic 'clear;cd ~/.config/waybar/scripts;./aur.sh'",
+		"min-length": 3
+	},
+
+	"custom/updater":{ 
+		"format":"<span color='#1e90ff'> </span>  {} U",
+		"exec": "pacman -Qu | wc -l",
+		"interval": 300,
+		"tooltip-format": "Pacman",
+		"on-click": "alacritty -e bash -ic 'clear;cd ~/.config/waybar/scripts;./pacman.sh'",
+		"min-length": 4,
+	},
+
+	
+	"tray":{
+			"spacing": 15,
+	},
+
+	"memory":{
+		"interval": 5,
+		"format": "<span color='#800000'>  </span> {used:0.1f} GB",
+		"tooltip": true,
+		"min-length": 2,
+		"on-click": "alacritty -e  bash -ic 'clear;htop'",
+		"tooltip-format": "  {used:0.1f}GB/{total:0.1f}GB"
+	},
+
+ "clock": {
+		"format": "{:%I:%M %p}",
+		"tooltip": false,
+	},
+
+ "wireplumber": {
+		"format": "Vol = {volume} %",
+		"tooltip": true,
+		"tooltip-format": "Volume : {volume}%",
+		"format-bluetooth": "󰂰 ",
+		"nospacing": 1,
+		"format-muted": "󰝟 ",
+		"format-icons": {
+				"headphone": " ",
+				"default": ["󰖀","󰕾 "," "]
+		},
+		"on-click": "pavucontrol",
+		"scroll-step": 1
+	},
+
+	"custom/theme":{
+		"format": "   ARCH BTW ",
+		"tooltip": false,
+		"on-click": "alacritty -e bash -ic 'clear; cd ~/.config/waybar/scripts/ && ./waybar.sh'"
+	},
+
+	"battery": {
+			"format": "<span color='#3cb371'>{capacity}%</span> <span color='#BF00FF'>{icon}</span>",
+			"format-icons": {
+					"charging": [
+							"󰢜",
+							"󰂆",
+							"󰂇",
+							"󰂈",
+							"󰢝",
+							"󰂉",
+							"󰢞",
+							"󰂊",
+							"󰂋",
+							"󰂅"
+					],
+					"default": [
+							"󰁺",
+							"󰁻",
+							"󰁼",
+							"󰁽",
+							"󰁾",
+							"󰁿",
+							"󰂀",
+							"󰂁",
+							"󰂂",
+							"󰁹"
+					]
+			},
+			"format-full": "<span color='#6C23A6'>Charged </span>",
+			"interval": 5,
+			"on-click": "alacritty -e bash -ic 'clear;battop'"
+	},
+    
+	"custom/power": {
+			"format": "<span color='#f38ba8'>󰤆</span>",
+			"tooltip": true,
+			"on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu",
+			"tooltip-format": "Power Menu"
+	},
+
+	
+	"backlight":{
+			"device": "{}",
+			"exec": "ls /sys/class/backlight",
+			"format": "{percent}%  <span color='#FFD700'>{icon}</span>",
+			"tooltip-format": "Brightness",
+			"format-icons": ["", "", "", "", "", "", "", "", ""],
+			"on-click": "alacritty -e bash -ic 'clear ;brightnessctl ; sleep 4 ; exit' && notify-send -t 4000 'Keep Your Brightness Level Between 20 to 30 to Save The Battery Life For Nearly 4 Hours'"
+	},
+
+	"cpu":{
+		"on-click": "alacritty -e  bash -ic 'clear; auto-cpufreq --stats' && notify-send -t 4000 'Maintain CPU Temperature'",
+		"format": "<span color='#f38ba8'>  </span>CPU",
+		"min-length": 5,
+		"tooltip": false,
+	},
+
+	"custom/timeshift":{
+		"on-click": "alacritty -e bash -ic 'clear; cd ~/.config/waybar/scripts && ./timeshift.sh'",
+		"format":"<span color='#ff0000'> </span> T",
+		"tooltip-format": "Timeshift",
+		"min-length":1,
+  },
+
+	"custom/disk":{
+		"format": "<span color='#33cb37'>  </span><span color='#cdd6f4'>{}iB</span>",
+		"interval": 200,
+		"exec": "~/.config/waybar/scripts/disk_script.sh",
+		"on-click": "alacritty -e bash -ic 'clear; ncdu / --exclude /media --exclude /run/timeshift'",
+		"tooltip": false,
+	},
+ 
+  "custom/temperature": {
+    "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
+    "format": "<span color='#FFA500'> </span>{}°C ",
+    "interval": 2,
+    "tooltip": false,
+	},
+
+	"custom/ani": {
+		"on-click": "alacritty -e bash -ic 'clear; cd ~/.config/waybar/scripts && ./ani-cli.sh'",
+		"format":"<span color='#ff0000'> </span> ",
+		"tooltip": false,
+	}
+}
