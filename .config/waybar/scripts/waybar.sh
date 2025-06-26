@@ -65,7 +65,8 @@ echo
 
 while true;do 
 
-	read -rp " :: Type The Code of the preffered theme from the above list (d/w/n): " theme
+
+	theme=$(echo -e "d\nw\nn" | gum choose )
 
 	case "$theme" in 
 		[d]*)
@@ -76,7 +77,6 @@ while true;do
 			cp config style.css ~/.config/waybar/
 			echo
 			echo " :: Successfully installed the configuration files of Dark pink theme ::"
-			clear
 			sleep 0.2
 			break
 			;;
@@ -89,7 +89,6 @@ while true;do
 			cd ~/.config/waybar/'style.css collections'/'colourful waybar style'/
 			cp config style.css ~/.config/waybar
 			echo " :: Successfully installed the configuration files of Colorful Waybar theme ::"
-			clear
 			sleep 0.2
 			break
 			;;
@@ -131,6 +130,7 @@ if [ -d my_dir ]; then
 	mkdir ~/.config/rofi
 fi
 
+echo 
 
 cd $my_dir
 
