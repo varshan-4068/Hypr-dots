@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 #install scripts directory
-dot=~/Hyprland-Arch/
-dot_dir=~/Hyprland-Arch/src
+dot_dir=~/Hypr-dots/src
 
 #logo
 source $dot_dir/print_logo.sh

@@ -31,9 +31,9 @@ case "$dot" in
 [y]*)
 	
 	cd ~
-	cd Hyprland-Arch/
+	cd Hypr-dots/
 	echo
-	echo " :: Entered the Hyprland-Arch Directory ::"
+	echo " :: Entered the Hypr-dots Directory ::"
 	echo
 	cd root/ 
 	sudo cp .bashrc .bash_profile /root

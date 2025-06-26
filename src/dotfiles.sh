@@ -36,9 +36,9 @@ case "$dot" in
 	usr=/usr/bin
 	bash=mybash/
 
-	cd Hyprland-Arch/
+	cd Hypr-dots/
 	echo
-	echo " :: Entered the Hyprland-Arch Directory ::"
+	echo " :: Entered the Hypr-dots Directory ::"
 	echo
 	cp -r .config/ ~
 	cd conf/ 
