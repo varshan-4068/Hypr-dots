@@ -24,9 +24,8 @@ reboot
 while true;do
 
 echo
-echo
 
-read -rp " :: Do u wanna reboot ur system? (y/n): " choose
+gum confirm " :: Do u wanna reboot ur system? (y/n): " && choose="yes" || choose="no"
 
 case "$choose" in
 	[y]* )

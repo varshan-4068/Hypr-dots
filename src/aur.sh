@@ -15,22 +15,22 @@ while true;do
 if [ -f /usr/bin/paru ]; then 
 	break 
 else 
-	echo 
-	echo 
-	read -rp " :: Do u wanna install the paru aur helper? (y/n): " aur
+	gum confirm " :: Do u wanna install the paru aur helper? (y/n): " && aur="yes" || aur="no"
 
 	case "$aur" in
-		[y*])
+		[yes*])
 			echo " :: Installing paru ( AUR helper ) ::"
 			git clone https://aur.archlinux.org/paru.git
 			cd paru/ || return
 			makepkg -si 
 			sudo rm -r ~/paru/
 			cd ~ || return
+			echo 
+			echo 
 			break
 			;;
 
-		[n]*)
+		[no]*)
 			break
 			;;
 
@@ -47,21 +47,19 @@ done
 
 while true;do
 
-echo 
-
-echo
-
-read -rp " :: Do u wanna install some aur packages? (y/n): " depen
+gum confirm " :: Do u wanna install some aur packages? (y/n): " && depen="yes" || depen="no"
 
 case "$depen" in
-	[y]*)
+	[yes]*)
 		echo " :: Installing aur packages ::"
 
 		paru -S "${paru[@]}" --noconfirm --needed
+		echo 
+		echo
 		break
 		;;
 
-	[n]*)
+	[no]*)
 		break
 		;;
 

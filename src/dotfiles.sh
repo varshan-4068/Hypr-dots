@@ -27,10 +27,10 @@ while true;do
 
 echo
 
-read -rp " :: Do u wanna install Dotfiles and some other files? (y/n): " dot
+gum confirm " :: Do u wanna install Dotfiles and some other files? (y/n): " && dot="yes" || dot="no"
 
 case "$dot" in 
-[y]*)
+[yes]*)
 
 	wallpaper=~/.config/backgrounds/lh.jpeg
 	conf=~/.config
@@ -38,9 +38,8 @@ case "$dot" in
 	bash=mybash/
 
 	cd Hyprland-Arch/ || return
-	echo
-	echo " :: Entered the Hyprland-Arch Directory ::"
-	echo
+	echo 
+	gum spin --spinner line --title="Installing the configs Wait a few Seconds :: " sleep 6
 	cp -r .config/ ~
 	cd conf/ || return
 	sudo cp -r pacman.conf spotify-launcher.conf /etc
@@ -53,6 +52,7 @@ case "$dot" in
 	cp starship.toml $conf
 	cp .bashrc .bash_profile ~
 	cd ../
+	sleep 3.5
 	swww-daemon &
 	swww img $wallpaper --transition-type wipe --transition-fps 60 --transition-duration 2 
 	wal -q -e -i $wallpaper
@@ -61,12 +61,11 @@ case "$dot" in
 	sudo pacman -Sy
 	systemctl enable libvirtd 
 	systemctl start libvirtd 
-	systemctl status libvirtd
 	echo 
 	echo " :: Copied the Dotfiles successfully ::"
 	echo
 	echo 
-	echo " :: Chmoding the Executable files.. ::"
+	gum spin --spinner line --title="Chmoding the Executable files.. :: " sleep 4
 	echo 
 	echo 
 	cd src/ || return
@@ -88,7 +87,7 @@ case "$dot" in
 	clear
 	break 
 	;;
-[n]*)
+[no]*)
 	clear
 	break 
 	;;
@@ -119,26 +118,24 @@ while true;do
 
 	cd themes/ || return
 
-	echo
-
-	read -rp " Do u wanna Install Rofi With Image? (y/n): " image
+	gum confirm " Do u wanna Install Rofi With Image? (y/n): " && image="yes" || image="no"
 
 	case "$image" in 
-		[y]*)
+		[yes]*)
 			if [ -f $my_file ];then 
 			 rm $my_file
 			fi
 			cd rofi-image-style || return
 			cp $my_file $my_dir
 			clear 
-			echo " :: Successfully Updated the Theme ::"
-			sleep 0.5 
+			gum spin --spinner dot --title="Successfully Updated the Theme ::" sleep 3.4
 			clear
 			cd ~ || return
 			break 
 			;;
-		[n]*)
+		[no]*)
 			break 
+			clear
 			;;
 		*)
 			echo 
@@ -152,13 +149,10 @@ done
 
 while true;do
 
-	echo 
-	echo 
-
-	read -rp " Do u wanna Install Rofi Without Image? (y/n): " rofi
+	gum confirm " Do u wanna Install Rofi Without Image? (y/n): " && rofi="yes" || rofi="no"
 
 	case "$rofi" in
-		[y]*)	
+		[yes]*)	
 			my_dir=~/.config/rofi/
 			my_file=config.rasi
 			if [ -f $my_file ];then 
@@ -169,13 +163,12 @@ while true;do
 			cd rofi-style || return
 			cp $my_file $my_dir
 			clear 
-			echo " :: Successfully Updated the Theme ::"
-			sleep 0.5
+			gum spin --spinner dot --title="Successfully Updated the Theme ::" sleep 3.4
 			clear
 			break 
 			;;
 		
-		[n]*)
+		[no]*)
 			break 
 			;;
 		*)

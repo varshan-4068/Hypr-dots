@@ -2,19 +2,14 @@
 
 set -e 
 
-echo 
-
-echo
-
 while true;do
 
-read -rp " :: Do u wanna Install the Dracula Theme? (y/n): " Dracula
+gum confirm " :: Do u wanna Install the Dracula Theme? (y/n): " && Dracula="yes" || Dracula="no"
 
 case "$Dracula" in 
-	[y]*)
+	[yes]*)
 		gtkzip=gtk-master.zip
 		theme=~/.themes
-		echo
 		axel https://github.com/dracula/gtk/archive/master.zip
 		unzip $gtkzip
 		mkdir $theme
@@ -23,11 +18,11 @@ case "$Dracula" in
 		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme with nwg-look if the theme doesn't work by default ::"
 		echo 
 		rm $gtkzip
-		sleep 3
-		clear
+		sleep 2
+		echo 
 		break 
 		;;
-	[n]*)
+	[no]*)
 		break 
 		;;
 	*)

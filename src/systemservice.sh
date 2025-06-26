@@ -2,15 +2,12 @@
 
 set -e 
 
-echo 
-echo
-
 while true;do
 
-read -rp " :: Do you Wanna enable Network services? (y/n): " service 
+gum confirm " :: Do you Wanna enable Network services? (y/n): " && service="yes" || service="no"
 
 case "$service" in 
-	[y]*)
+	[yes]*)
 		echo 
 		systemctl enable NetworkManager.service
 		echo 
@@ -18,7 +15,7 @@ case "$service" in
 		echo 
 		break 
 		;;
-	[n]*)
+	[no]*)
 		break 
 		;;
 	*)
@@ -29,20 +26,17 @@ esac
 
 done
 
-echo 
-echo 
-
 while true;do
 
-read -rp " :: Do you wanna enable Bluetooth services? (y/n): " Bluetooth
+gum confirm " :: Do you wanna enable Bluetooth services? (y/n): " && Bluetooth="yes" || Bluetooth="no"
 
 case "$Bluetooth" in
-  [y]*)
+  [yes]*)
 		echo 
 		systemctl enable bluetooth.service 
 		break
 		;;
-	[n]*)
+	[no]*)
 		break 
 		;;
 	*)

@@ -24,7 +24,6 @@ waybar
 
 
 echo "---------------------------------------------------------------------------------------------------------"
-echo 
 echo
 echo "                                     :: Dark Pink Theme = d             ::                                    "
 echo  
@@ -33,15 +32,12 @@ echo
 echo "                                     :: To Cancel the Script = n        ::                                    "
 echo 
 echo
-echo
 echo "-------------- Above Listed Are the Codes to Select your choice of theme on the prompt below ------------"
-echo 
-echo 
 echo 
 
 while true;do 
 
-	read -rp " :: Type The Code of the preffered theme from the above list (d/w/n): " theme 
+	theme=$(echo -e "d\nw\nn" | gum choose )
 
 	case "$theme" in 
 		[d]*)

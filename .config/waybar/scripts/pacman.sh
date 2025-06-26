@@ -1,4 +1,6 @@
-pacman(){
+#!/usr/bin/env bash
+
+pacmanlogo(){
 	cat << "EOF"
 
 
@@ -14,14 +16,14 @@ EOF
 }
 
 clear
-pacman
+pacmanlogo
 
 while true;do
 
-read -p " :: Do u wanna update ur pacman (y/n): " pacman 
+gum confirm " :: Do u wanna update ur pacman (y/n) ?" && pacmanup="yes" ||  pacmanup="no"
 
-case "$pacman" in
-	[y]*)
+case "$pacmanup" in
+	[yes]*)
 		echo 
 		sudo pacman -v -Syu --noconfirm
 		sleep 1
@@ -29,7 +31,7 @@ case "$pacman" in
 		sleep 1
 		break
 		;;
-	[n]*)
+	[no]*)
 		break 
 		;;
 
@@ -43,11 +45,5 @@ esac
 
 done 
 
-while true;do
-
-
-echo 
-
-echo
 
 

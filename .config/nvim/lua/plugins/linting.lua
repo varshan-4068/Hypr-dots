@@ -12,16 +12,24 @@ return {
 			css = { "stylelint" },
     }
 
-    local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-
-    vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
-      group = lint_augroup,
+    vim.api.nvim_create_autocmd({"BufWritePost"}, {
       callback = function()
         lint.try_lint()
       end,
     })
 
-    vim.keymap.set("n", "<leader>l", function()
+		vim.diagnostic.config({
+			virtual_text = true,
+			signs = true,
+			severity_sort = true,
+			underline = false,
+			float = {
+				source = "always",
+				border = "rounded",
+			}
+		})
+
+    vim.keymap.set("n", "<leader>t", function()
       lint.try_lint()
     end, { desc = "Trigger linting for current file" })
   end,

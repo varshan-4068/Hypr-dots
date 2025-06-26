@@ -24,27 +24,21 @@ while true;do
 
 echo
 
-read -rp " :: Do u wanna install sddm themes? (y/n): " lm
+gum confirm " :: Do u wanna install sddm themes? (y/n): " && lm="yes" || lm="no"
 
 case "$lm" in
-[y]*)
+[yes]*)
 	echo 
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
 	echo 
-	echo 
-	echo 
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
-	echo 
 	echo
 	echo
 	break 
 	;;
-[n]*)
-	echo 
-	echo 
+[no]*)
 	echo
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
-	echo 
 	echo 
 	echo 
 	break 
@@ -64,10 +58,10 @@ done
 
 while true;do
 
-read -rp " :: Do u wanna delete the directory Hyprland-Arch/ that has been cloned to your system? (y/n): " del 
+gum confirm " :: Do u wanna delete the directory Hyprland-Arch/ that has been cloned to your system? (y/n): " && del="yes" || del="no"
 
 case "$del" in
- [y]*)
+ [yes]*)
 		cd ~ || return
 		sudo rm -r Hyprland-Arch/
 		echo 
@@ -79,7 +73,7 @@ case "$del" in
 		clear
 		break 
 		;;
- [n]*)
+ [no]*)
 		clear
 		break 
 		;;

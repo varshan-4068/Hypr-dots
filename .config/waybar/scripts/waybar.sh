@@ -29,10 +29,10 @@ echo
 
 while true; do
 
-read -p " :: Do u wanna Change your Waybar Theme? (y/n): " change
+gum confirm " :: Do u wanna Change your Waybar Theme? (y/n): " && change="yes" || change="no"
 
 case "$change" in 
-	[y]*)
+	[yes]*)
 
 waybar(){
 	cat << EOF 
@@ -65,7 +65,7 @@ echo
 
 while true;do 
 
-	read -p " :: Type The Code of the preffered theme from the above list (d/w/l/n): " theme 
+	read -rp " :: Type The Code of the preffered theme from the above list (d/w/n): " theme
 
 	case "$theme" in 
 		[d]*)
@@ -138,15 +138,12 @@ my_file=config.rasi
 
 cd themes/
 
-echo 
-echo
-
 while true; do
 	
-read -p " :: Do u wanna Install Rofi With Image? (y/n): " image
+gum confirm " :: Do u wanna Install Rofi With Image? (y/n): " && image="yes" || image="no"
 
 case "$image" in 
-	[y]*)
+	[yes]*)
 		if [ -f $my_file ]; then
 			rm my_file
 		fi
@@ -157,9 +154,8 @@ case "$image" in
 		sleep 0.5 
 		clear
 		exit
-		break 
 		;;
-	[n]*)
+	[no]*)
 		break 
 		;;
 	*)
@@ -172,15 +168,12 @@ esac
 
 done
 
-echo 
-echo 
-
 while true;do 
 
-read -p " :: Do u wanna Install Rofi Without Image? (y/n): " rofi
+gum confirm " :: Do u wanna Install Rofi Without Image? (y/n): " && rofi="yes" || rofi="no"
 
 case "$rofi" in
-  [y]*)	
+  [yes]*)	
 		if [ -f $my_file ];then
 			rm my_file
 		fi
@@ -193,7 +186,7 @@ case "$rofi" in
 		break 
 		;;
 	
-	[n]*)
+	[no]*)
 		clear
 		break 
 		;;

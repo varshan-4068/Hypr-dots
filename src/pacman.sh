@@ -7,6 +7,7 @@ dependencies=(
 	wget #must
 	eza #must
 	less #must
+	gum #must
 	base-devel #must
 	firefox #must
 	bat #must
@@ -118,17 +119,19 @@ dependencies=(
 
 while true;do
 
-read -rp " :: Do u wanna install the dependencies? (y/n): " package
+gum confirm " :: Do u wanna install the dependencies? (y/n): " && package="yes" || package="no"
 
 case "$package" in
 
-	[y]*)
+	[yes]*)
 		echo " :: Installing dependencies ::"
 
 		sudo pacman -S "${dependencies[@]}" --needed --noconfirm
+	  echo 
+		echo
 		break
 		;;
-	[n]*)
+	[no]*)
 
 		break
 		;;

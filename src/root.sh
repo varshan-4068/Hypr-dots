@@ -27,10 +27,10 @@ while true;do
 
 echo
 
-read -rp " :: Do u wanna install Dotfiles and some other files in the root Directory ? (y/n): " dot
+gum confirm " :: Do u wanna install Dotfiles and some other files in the root Directory ? (y/n): " && dots="yes" || dots="no"
 
-case "$dot" in 
-[y]*)
+case "$dots" in 
+[yes]*)
 	
 	cd ~ || return
 	cd Hyprland-Arch/ || return
@@ -51,7 +51,7 @@ case "$dot" in
 	clear
 	break 
 	;;
-[n]*)
+[no]*)
 	clear
 	break 
 	;;

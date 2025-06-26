@@ -5,13 +5,13 @@ set -e
 roll(){
 	cat << "EOF"
 
-                             _______  ___   __   __  _______  _______  __   __  ___   _______  _______ 
-                            |       ||   | |  |_|  ||       ||       ||  | |  ||   | |       ||       |
-                            |_     _||   | |       ||    ___||  _____||  |_|  ||   | |    ___||_     _|
-                              |   |  |   | |       ||   |___ | |_____ |       ||   | |   |___   |   |  
-                              |   |  |   | |       ||    ___||_____  ||       ||   | |    ___|  |   |  
-                              |   |  |   | | ||_|| ||   |___  _____| ||   _   ||   | |   |      |   |  
-                              |___|  |___| |_|   |_||_______||_______||__| |__||___| |___|      |___|  
+  _______  ___   __   __  _______  _______  __   __  ___   _______  _______ 
+ |       ||   | |  |_|  ||       ||       ||  | |  ||   | |       ||       |
+ |_     _||   | |       ||    ___||  _____||  |_|  ||   | |    ___||_     _|
+   |   |  |   | |       ||   |___ | |_____ |       ||   | |   |___   |   |  
+   |   |  |   | |       ||    ___||_____  ||       ||   | |    ___|  |   |  
+   |   |  |   | | ||_|| ||   |___  _____| ||   _   ||   | |   |      |   |  
+   |___|  |___| |_|   |_||_______||_______||__| |__||___| |___|      |___|  
 
 
 EOF
@@ -22,16 +22,16 @@ roll
 
 while true;do 
 
-read -p " :: Do u wanna backup ur system with timeshift (y/n): " backup
+gum confirm " :: Do u wanna backup ur system with timeshift (y/n): " && backup="yes" || backup="no"
 
 case "$backup" in 
-	[y]*)
+	[yes]*)
 		echo 
 		sudo -E timeshift-launcher 
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		break 
 		;;
-	[n]*)
+	[no]*)
 		break
 		;;
 	*)
@@ -50,7 +50,7 @@ echo
 
 echo 
 
-read -p " :: Do u wanna restore your backup (y/n): " restore
+read -rp " :: Do u wanna restore your backup (y/n): " restore
 
 case "$restore" in 
 	[y]*) 

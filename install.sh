@@ -16,10 +16,6 @@ echo
 #sourcing backup script
 source $dot_dir/backup.sh
 
-echo
-
-echo
-
 cd ~
 
 #sourcing pacman needed packages installation scripts..
@@ -70,8 +66,6 @@ source $dot_dir/reboot.sh
 
 clear 
 
-echo " :: For restoring your configs run restore.sh from $dot_dir ::"
-
-sleep 2
+gum spin --spinner dot --title="For restoring your configs run restore.sh from $dot_dir " sleep 2.4
 
 clear

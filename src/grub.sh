@@ -24,10 +24,10 @@ while true;do
 
 echo 
 
-read -rp " :: Do u wanna install grub themes by ChrisTitusTech? (y/n): " chris
+gum confirm " :: Do u wanna install grub themes by ChrisTitusTech? (y/n): " && chris="yes" || chris="no"
 
 case "$chris" in
-	[y]*)
+	[yes]*)
 		echo 
 		echo " :: Cloning Themes ::"
 		echo
@@ -37,7 +37,7 @@ case "$chris" in
 		cd ~ || return
 		break 
 		;;
-	[n]*)
+	[no]*)
 		break 
 		;;
 	*)

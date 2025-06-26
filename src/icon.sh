@@ -1,16 +1,12 @@
 #!/usr/bin/env bash 
 
-echo 
-
-echo 
-
 while true;do 
 
-	read -rp " :: Do u Wanna Install the Dracula Icon Theme ? (y/n): " icons
+	gum confirm " :: Do u Wanna Install the Dracula Icon Theme ? (y/n): " && icons="yes" || icons="no"
 
 	case "$icons" in 
 		
-		[y]*)
+		[yes]*)
 		
 		icon=~/.icons/
 		zip=Dracula.zip
@@ -20,9 +16,7 @@ while true;do
 		unzip $zip
 
 		if [ ! -d $icon ]; then
-
 			mkdir $icon
-
 		fi
 
 		mv Dracula/ $icon
@@ -31,10 +25,11 @@ while true;do
 		echo 
 		echo " :: Icon Theme Was Successfully Installed & Select the Icon theme with nwg-look ::"
 		echo 
+		echo 
 		break 
 		;;
 	  
-	 [n]*)
+	 [no]*)
 		 break 
 		 ;; 
 		*) 
