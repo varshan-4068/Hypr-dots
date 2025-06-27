@@ -9,6 +9,7 @@ dependencies=(
 	less #must
 	gum #must
 	base-devel #must
+	shellcheck #must for nvim bash linter
 	firefox #must
 	bat #must
 	flatpak #optional

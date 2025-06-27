@@ -38,7 +38,6 @@ case "$dot" in
 	bash=mybash/
 
 	cd Hyprland-Arch/ || return
-	echo 
 	gum spin --spinner line --title="Installing the configs Wait a few Seconds :: " sleep 6
 	cp -r .config/ ~
 	cd conf/ || return
