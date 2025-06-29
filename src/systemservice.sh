@@ -34,6 +34,31 @@ case "$Bluetooth" in
   [yes]*)
 		echo 
 		systemctl enable bluetooth.service 
+		systemctl start bluetooth.service 
+		break
+		;;
+	[no]*)
+		break 
+		;;
+	*)
+		echo 
+		echo 
+		echo " :: Type either y(yes) or n(no) ::"
+		echo 
+		echo
+esac
+
+done
+
+while true;do
+
+	gum confirm " :: Do you wanna enable libvirt (for qemu) services? (y/n): " && qemu="yes" || qemu="no"
+
+case "$qemu" in
+  [yes]*)
+		echo 
+		systemctl enable libvirtd 
+		systemctl start libvirtd 
 		break
 		;;
 	[no]*)

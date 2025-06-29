@@ -51,17 +51,14 @@ case "$dot" in
 	cp starship.toml $conf
 	cp .bashrc .bash_profile ~
 	cd ../
-	sleep 3.5
+	gum spin --spinner line --title="Installing the configs Wait a few Seconds :: " sleep 6
 	swww-daemon &
 	swww img $wallpaper --transition-type wipe --transition-fps 60 --transition-duration 2 
 	wal -q -e -i $wallpaper
 	echo 
 	echo 
-	sudo pacman -Sy
-	systemctl enable libvirtd 
-	systemctl start libvirtd 
-	echo 
 	echo " :: Copied the Dotfiles successfully ::"
+	sleep 2
 	echo
 	echo 
 	gum spin --spinner line --title="Chmoding the Executable files.. :: " sleep 4

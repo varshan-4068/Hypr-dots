@@ -20,35 +20,59 @@ gum style \
 clear
 sddm
 
+echo "----------------------------------------------------------------------------------------------------------------"
+echo
+echo "                                     :: Maldives Inspired sddm theme = M  ::                                    "
+echo  
+echo "                                     :: sddm-astronaut-theme = S          ::                                    "
+echo 
+echo "                                     :: To Cancel the Script = n          ::                                    "
+echo 
+echo
+echo "----------------- Above Listed Are the Codes to Select your choice of theme on the prompt below ----------------"
+echo 
 while true;do
 
 echo
 
-gum confirm " :: Do u wanna install sddm themes? (y/n): " && lm="yes" || lm="no"
+	sddm_theme=$(echo -e "M\nS\nn" | gum choose )
 
-case "$lm" in
-[yes]*)
+case "$sddm_theme" in
+[S]*)
 	echo 
+	sudo cp ~/Hyprland-Arch/sddm/sddm.conf /etc
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
+	sudo cp ~/Hyprland-Arch/sddm/sddm.conf /etc
 	echo 
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
 	echo
 	echo
 	break 
 	;;
-[no]*)
+[M]*)
+	echo 
+	sudo cp ~/Hyprland-Arch/sddm/sddm.conf /etc
+	sudo cp -r ~/Hyprland-Arch/sddm/sddm-theme/ /usr/share/sddm/themes/
+	gum spin --spinner line --title="Installing the maldives Inspired sddm theme.." sleep 3.8
+	echo
+	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
+	echo 
+	echo 
+	break
+	;;
+[n]*)
 	echo
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
 	echo 
 	echo 
 	break 
 	;;
-
 *)
 	echo 
 	echo 
 	echo " :: Please answer yes(y) or no(n) ::"
 	echo 
+	break
 	;;
 
 esac
