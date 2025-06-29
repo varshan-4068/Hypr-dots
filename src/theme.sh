@@ -4,20 +4,23 @@ set -e
 
 while true;do
 
-gum confirm " :: Do u wanna Install the Dracula Theme? (y/n): " && Dracula="yes" || Dracula="no"
+gum confirm " :: Do u wanna Install the Graphite Theme? (y/n): " && Graphite="yes" || Graphite="no"
 
-case "$Dracula" in 
+case "$Graphite" in 
 	[yes]*)
-		gtkzip=gtk-master.zip
+		gtkzip=Graphite-gtk-theme-main.zip
 		theme=~/.themes
-		axel https://github.com/dracula/gtk/archive/master.zip
-		unzip $gtkzip
-		mkdir $theme
-		mv gtk-master/ $theme
-		echo 
-		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme with nwg-look if the theme doesn't work by default ::"
-		echo 
+		if [ ! -d ~/.themes ]; then 
+			mkdir $theme
+		fi 
+		cd ~
+		axel https://github.com/vinceliuice/Graphite-gtk-theme/archive/refs/heads/main.zip 
+		unzip $gtkzip 
 		rm $gtkzip
+		./Graphite-gtk-theme-main/install.sh 
+		echo 
+		echo " :: Graphite Theme is Installed Successfully & Select the Graphite Theme with nwg-look if the theme doesn't work by default ::"
+		echo 
 		sleep 2
 		echo 
 		break 

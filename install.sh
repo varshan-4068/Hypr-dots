@@ -33,13 +33,13 @@ source $dot_dir/ani-cli.sh
 cd $dot_dir
 
 #sourcing the theme installation scripts..
-source theme.sh
+source $dot_dir/theme.sh
 
 #sourcing the icon installation scripts..
-source icon.sh
+source $dot_dir/icon.sh
 
 #sourcing the systemservices enabling script like nm and bluetooth.
-source systemservice.sh
+source $dot_dir/systemservice.sh
 
 cd ~
 

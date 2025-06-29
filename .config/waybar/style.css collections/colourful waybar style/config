@@ -42,7 +42,7 @@
 		"exec": "paru -Qu | wc -l",
 		"interval": 300,
 		"tooltip-format":"Arch User Repository" ,
-		"on-click": "alacritty -e bash -ic 'clear;cd ~/.config/waybar/scripts;./aur.sh'",
+		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/aur.sh'",
 		"min-length": 3
 	},
 
@@ -51,7 +51,7 @@
 		"exec": "pacman -Qu | wc -l",
 		"interval": 300,
 		"tooltip-format": "Pacman",
-		"on-click": "alacritty -e bash -ic 'clear;cd ~/.config/waybar/scripts;./pacman.sh'",
+		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/pacman.sh'",
 		"min-length": 4,
 	},
 
@@ -92,7 +92,7 @@
 	"custom/theme":{
 		"format": "   ARCH BTW ",
 		"tooltip": false,
-		"on-click": "alacritty -e bash -ic 'clear; cd ~/.config/waybar/scripts/ && ./waybar.sh'"
+		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/waybar.sh'"
 	},
 
 	"battery": {
@@ -153,7 +153,7 @@
 	},
 
 	"custom/timeshift":{
-		"on-click": "alacritty -e bash -ic 'clear; cd ~/.config/waybar/scripts && ./timeshift.sh'",
+		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/timeshift.sh'",
 		"format":"<span color='#ff0000'> </span> T",
 		"tooltip-format": "Timeshift",
 		"min-length":1,
@@ -175,7 +175,7 @@
 	},
 
 	"custom/ani": {
-		"on-click": "alacritty -e bash -ic 'clear; cd ~/.config/waybar/scripts && ./ani-cli.sh'",
+		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/ani-cli.sh'",
 		"format":"<span color='#ff0000'> </span> ",
 		"tooltip": false,
 	}
