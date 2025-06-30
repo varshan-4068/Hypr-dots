@@ -21,7 +21,7 @@ case "$Dracula" in
 		mv gtk-master/ $rename
 		mv $rename $theme
 		echo 
-		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme named as gtk-master with nwg-look ::"
+		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme with nwg-look ::"
 		echo 
 		sleep 2
 		echo 
