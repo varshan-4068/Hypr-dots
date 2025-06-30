@@ -10,6 +10,7 @@ case "$Dracula" in
 	[yes]*)
 		gtkzip=gtk-master.zip
 		theme=~/.themes
+		rename=Dracula/
 		if [ ! -d ~/.themes ]; then 
 			mkdir $theme
 		fi 
@@ -17,7 +18,8 @@ case "$Dracula" in
 		axel https://github.com/dracula/gtk/archive/master.zip
 		unzip $gtkzip 
 		rm $gtkzip
-		mv gtk-master/ ~/.themes/
+		mv gtk-master/ $rename
+		mv $rename $theme
 		echo 
 		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme named as gtk-master with nwg-look ::"
 		echo 

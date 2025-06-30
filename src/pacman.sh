@@ -8,6 +8,7 @@ dependencies=(
 	eza #must
 	less #must
 	gum #must
+	nemo #must
 	base-devel #must
 	gnome-disk-utility #optional
 	shellcheck #must for nvim bash linter
@@ -69,7 +70,6 @@ dependencies=(
 	zoxide #must
 	tldr #optinal
 	timeshift #must
-	nautilus #must
 	thermald #must
 	mpv #must
 	blueman #bluetooth
