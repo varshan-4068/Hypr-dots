@@ -8,6 +8,7 @@ dependencies=(
 	eza #must
 	less #must
 	gum #must
+	hyprpaper
 	nemo #must
 	base-devel #must
 	gnome-disk-utility #optional
