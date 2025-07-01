@@ -26,11 +26,12 @@ export HISTSIZE=1000
 export CLICOLOR=1
 export FZF_DEFAULT_OPTS=' --height=45% --layout=reverse --border=bold --no-info --highlight-line --no-scrollbar --list-label=" SEARCH FOR ANY FILE " --list-border=sharp --preview-label=" PREVIEW OF THE FILE " --preview-border=sharp ' 
 export HISTCONTROL=erasedups
-
+export MANPAGER="nvim +Man!"
 
 # alias section
 alias grep='grep --color=auto'
 alias cp='cp -r'
+alias rm='rm -r'
 alias mkdir='mkdir -p'
 alias ls='eza --color=auto --group-directories-first'
 alias nv='fzf --preview "less {}" | xargs -ro nvim'
@@ -114,4 +115,9 @@ if [ -f /etc/bash_completion ]; then
 elif [ -f /usr/share/bash_completion ]; then
 		./usr/share/bash_completion
 fi
+
+if [ -f /usr/bin/fastfetch ]; then 
+	fastfetch
+fi
+
 
