@@ -27,6 +27,8 @@ And using nwg-look select your icon and gtk theme as Dracula...
 
 These were my Configuration Files With Dracula Themed GTK Setup.... 
 
+![dracula](https://github.com/user-attachments/assets/c8050519-c70e-43aa-80e2-2e33c16b0444)
+
 > [!Tip]
 >
 > *Try to have your packages up to date to prevent any breakages..*
@@ -60,6 +62,8 @@ These were my Configuration Files With Dracula Themed GTK Setup....
 > [!Tip]
 >
 > *Use Waypaper to change Wallpapers if u have a little good hardware because in a little old hardware the waypaper loads wallpapers a little slowly, just give it a try ...*
+
+![waypaper](https://github.com/user-attachments/assets/0fcdbb98-476b-469a-bf12-b9b0699d75e9)
 
 --> *To Install waypaper in arch linux* , 
 
