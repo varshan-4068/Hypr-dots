@@ -43,7 +43,7 @@ These were my Configuration Files With Dracula Themed GTK Setup....
 |      Rofi       |   <kbd>Super</kbd> + <kbd>A</kbd>       |
 |   qutebrowser   |   <kbd>Super</kbd> + <kbd>Q</kbd>       |
 |      Brave      |   <kbd>Super</kbd> + <kbd>B</kbd>       |
-|     Nautilus    |   <kbd>Super</kbd> + <kbd>E</kbd>       | 
+|      Nemo       |   <kbd>Super</kbd> + <kbd>E</kbd>       | 
 | Waybar Toggling |   <kbd>Super</kbd> + <kbd>P</kbd>       |
 
 |                 Keys                | Action      |
@@ -57,7 +57,6 @@ These were my Configuration Files With Dracula Themed GTK Setup....
 
 
 # *Swww*
-
 
 > [!Tip]
 >
