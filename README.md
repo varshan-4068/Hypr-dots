@@ -1,6 +1,8 @@
 
 # *Hypr-dots*
 
+![system](https://github.com/user-attachments/assets/9f0b46c8-c6c6-41f9-9c32-8b54e3c54e6a)
+
 This Repo is an Stable release repo of my dotfiles for Rolling release checkout [My gitlab repo](https://gitlab.com/varshan-4068/Hyprland-Arch)
 
 To Install my Dotfiles,etc Run the commands below....
