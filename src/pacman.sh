@@ -8,11 +8,12 @@ dependencies=(
 	eza #must
 	less #must
 	gum #must
-	hyprpaper
 	nemo #must
 	base-devel #must
 	gnome-disk-utility #optional
+	capitaine-cursors #must
 	shellcheck #must for nvim bash linter
+	hyprpaper #must
 	firefox #must
 	bat #must
 	flatpak #optional
