@@ -1,7 +1,7 @@
 
 # *Hypr-dots*
 
-![system](https://github.com/user-attachments/assets/9f0b46c8-c6c6-41f9-9c32-8b54e3c54e6a)
+![system](https://github.com/user-attachments/assets/eec7025a-fce6-474c-9f09-42bb7ec35aef)
 
 This Repo is an Stable release repo of my dotfiles for Rolling release checkout [My gitlab repo](https://gitlab.com/varshan-4068/Hyprland-Arch)
 
@@ -27,7 +27,7 @@ And using nwg-look select your icon and gtk theme as Dracula...
 
 These were my Configuration Files With Dracula Themed GTK Setup.... 
 
-![dracula](https://github.com/user-attachments/assets/c8050519-c70e-43aa-80e2-2e33c16b0444)
+![tokyonight-dark](https://github.com/user-attachments/assets/9eb887ff-269a-4bbf-9f19-9d33829f4d1d)
 
 > [!Tip]
 >
@@ -61,8 +61,9 @@ These were my Configuration Files With Dracula Themed GTK Setup....
 > [!Tip]
 >
 > *Use Waypaper to change Wallpapers if u have a little good hardware because in a little old hardware the waypaper loads wallpapers a little slowly, just give it a try ...*
+>
 
-![waypaper](https://github.com/user-attachments/assets/0fcdbb98-476b-469a-bf12-b9b0699d75e9)
+![waypapers](https://github.com/user-attachments/assets/5a37b3dd-3632-4bc4-aa1a-fc93748837bd)
 
 --> *To Install waypaper in arch linux* , 
 
