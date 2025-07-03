@@ -32,12 +32,12 @@ gum confirm " :: Do u wanna install Dotfiles and some other files? (y/n): " && d
 case "$dot" in 
 [yes]*)
 
-	wallpaper=~/.config/backgrounds/lh.jpeg
+	wallpaper=~/.config/backgrounds/fr.png
 	conf=~/.config
 	usr=/usr/bin
 	bash=mybash/
 
-	cd Hyprland-Arch/ || return
+	cd Hypr-dots/ || return
 	gum spin --spinner line --title="Installing the configs Wait a few Seconds :: " sleep 6
 	cp -r .config/ ~
 	cd conf/ || return
