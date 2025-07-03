@@ -23,7 +23,7 @@ To Install my Dotfiles,etc Run the commands below....
 > 
 > *If u have a scaling factor greater than 1.0 then u might have issues in wayland with fractional scaling so the solution is refer ~/config/hypr/monitors.conf to get an idea*
 
-And using nwg-look select your icon and gtk theme as Dracula...
+And using nwg-look select your icon and gtk theme as Tokyonight...
 
 These were my Configuration Files With Tokyonight Themed GTK Setup.... 
 
@@ -42,7 +42,6 @@ These were my Configuration Files With Tokyonight Themed GTK Setup....
 |    Alacritty    |   <kbd>Super</kbd> + <kbd>Return</kbd>  | 
 |      Rofi       |   <kbd>Super</kbd> + <kbd>A</kbd>       |
 |   qutebrowser   |   <kbd>Super</kbd> + <kbd>Q</kbd>       |
-|      Brave      |   <kbd>Super</kbd> + <kbd>B</kbd>       |
 |    Nautilus    |   <kbd>Super</kbd> + <kbd>E</kbd>       | 
 | Waybar Toggling |   <kbd>Super</kbd> + <kbd>P</kbd>       |
 
