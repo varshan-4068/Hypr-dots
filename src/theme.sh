@@ -4,25 +4,20 @@ set -e
 
 while true;do
 
-gum confirm " :: Do u wanna Install the Dracula Theme? (y/n): " && Dracula="yes" || Dracula="no"
+gum confirm " :: Do u wanna Install the Tokyonight Theme? (y/n): " && Tokyonight="yes" || Tokyonight="no"
 
-case "$Dracula" in 
+case "$Tokyonight" in 
 	[yes]*)
-		gtkzip=gtk-master.zip
 		theme=~/.themes
-		rename=Dracula/
+		gtk_theme=Tokyonight-Dark/
 		if [ ! -d ~/.themes ]; then 
 			mkdir $theme
 		fi 
-		cd ~
-		axel https://github.com/dracula/gtk/archive/master.zip
-		unzip $gtkzip 
-		rm $gtkzip
-		mv gtk-master/ $rename
-		sudo cp -r $rename /usr/share/themes/
-		mv $rename $theme
+		cd ~/Hyprland-Arch/gtk/ 
+		sudo cp -r $gtk_theme /usr/share/themes/
+		cp -r $gtk_theme $theme
 		echo 
-		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme with nwg-look ::"
+		echo " :: Tokyonight Theme is Installed Successfully & Select the Tokyonight Theme with nwg-look ::"
 		echo 
 		sleep 2
 		echo 

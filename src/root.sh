@@ -33,7 +33,7 @@ case "$dots" in
 [yes]*)
 	
 	cd ~ || return
-	cd Hypr-dots/ || return
+	cd Hyprland-Arch/ || return
 	echo
 	echo " :: Entered the Hyprland-Arch Directory ::"
 	echo

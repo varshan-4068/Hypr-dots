@@ -11,6 +11,7 @@ dependencies=(
 	nemo #must
 	base-devel #must
 	gnome-disk-utility #optional
+	gtk-engine-murrine #must for tokyonight colorscheme to work
 	capitaine-cursors #must
 	shellcheck #must for nvim bash linter
 	hyprpaper #must
