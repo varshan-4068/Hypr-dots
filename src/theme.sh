@@ -19,6 +19,7 @@ case "$Dracula" in
 		unzip $gtkzip 
 		rm $gtkzip
 		mv gtk-master/ $rename
+		sudo cp -r $rename /usr/share/themes/
 		mv $rename $theme
 		echo 
 		echo " :: Dracula Theme is Installed Successfully & Select the Dracula Theme with nwg-look ::"
