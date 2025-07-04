@@ -32,7 +32,7 @@ gum confirm " :: Do u wanna install Dotfiles and some other files? (y/n): " && d
 case "$dot" in 
 [yes]*)
 
-	wallpaper=~/.config/backgrounds/lh.jpeg
+	wallpaper=~/.config/backgrounds/fr.png
 	conf=~/.config
 	usr=/usr/bin
 	bash=mybash/
