@@ -13,7 +13,7 @@ case "$Tokyonight" in
 		if [ ! -d ~/.themes ]; then 
 			mkdir $theme
 		fi 
-		cd ~/Hyprland-Arch/gtk/ 
+		cd ~/Hypr-dots/gtk/ 
 		sudo cp -r $gtk_theme /usr/share/themes/
 		cp -r $gtk_theme $theme
 		echo 

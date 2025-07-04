@@ -40,9 +40,9 @@ echo
 case "$sddm_theme" in
 [S]*)
 	echo 
-	sudo cp ~/Hyprland-Arch/sddm/sddm.conf /etc
+	sudo cp ~/Hypr-dots/sddm/sddm.conf /etc
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
-	sudo cp ~/Hyprland-Arch/sddm/sddm.conf /etc
+	sudo cp ~/Hypr-dots/sddm/sddm.conf /etc
 	echo 
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
 	echo
@@ -51,8 +51,8 @@ case "$sddm_theme" in
 	;;
 [M]*)
 	echo 
-	sudo cp ~/Hyprland-Arch/sddm/sddm.conf /etc
-	sudo cp -r ~/Hyprland-Arch/sddm/sddm-theme/ /usr/share/sddm/themes/
+	sudo cp ~/Hypr-dots/sddm/sddm.conf /etc
+	sudo cp -r ~/Hypr-dots/sddm/sddm-theme/ /usr/share/sddm/themes/
 	gum spin --spinner line --title="Installing the maldives Inspired sddm theme.." sleep 3.8
 	echo
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
@@ -82,15 +82,15 @@ done
 
 while true;do
 
-gum confirm " :: Do u wanna delete the directory Hyprland-Arch/ that has been cloned to your system? (y/n): " && del="yes" || del="no"
+gum confirm " :: Do u wanna delete the directory Hypr-dots/ that has been cloned to your system? (y/n): " && del="yes" || del="no"
 
 case "$del" in
  [yes]*)
 		cd ~ || return
-		sudo rm -r Hyprland-Arch/
+		sudo rm -r Hypr-dots/
 		echo 
 		echo
-		echo " :: Deleted the Hyprland-Arch/ directory successfully ::"
+		echo " :: Deleted the Hypr-dots/ directory successfully ::"
 		echo 
 		echo
 		sleep 1.2
