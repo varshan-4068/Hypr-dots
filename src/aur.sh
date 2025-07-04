@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 paru=(
-	hyprshot
-	timeshift-autosnap
-	battop
-	waypaper
+	hyprshot	#screenshot utility
+	timeshift-autosnap	#timeshift snapshot automation 
+	battop #battery stats 
+	waypaper	#wallpaper selector
 	multitail
-	python-pywal16
+	python-pywal16 #pywal 
+	sc-im #spreedsheet vim based 
 )
 
 
