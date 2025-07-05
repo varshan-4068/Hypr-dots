@@ -7,11 +7,6 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
 
-# pywal section
-if [ -f /usr/bin/wal ]; then
-  (cat ~/.cache/wal/sequences) &
-fi
-
 # checks window size after wach command
 shopt -s checkwinsize
 

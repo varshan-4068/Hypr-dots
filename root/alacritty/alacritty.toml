@@ -1,3 +1,5 @@
+general.import = ["~/.config/alacritty/colors.toml"]
+
 [window]
 padding.x = 10
 padding.y = 8
@@ -17,6 +19,6 @@ thickness = 1.0
 [mouse]
 hide_when_typing = true 
 
-[colors]
-primary.foreground = "#cdd6f4"
-primary.background = "#000000"
+# [colors]
+# primary.foreground = "#cdd6f4"
+# primary.background = "#000000"
