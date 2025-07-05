@@ -116,8 +116,8 @@ elif [ -f /usr/share/bash_completion ]; then
 		./usr/share/bash_completion
 fi
 
-if [ -f /usr/bin/fastfetch ]; then 
-	fastfetch
-fi
+# if [ -f /usr/bin/fastfetch ]; then 
+# 	fastfetch
+# fi
 
 
