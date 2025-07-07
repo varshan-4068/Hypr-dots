@@ -9,7 +9,7 @@
 #
 # See README.md for more information.
 
-notify-send -t 3000 "Have A Nice Day Sirivarshan"
+notify-send -t 3000 "Have A Nice Day Kiddo"
 
 set -e
 set -u
