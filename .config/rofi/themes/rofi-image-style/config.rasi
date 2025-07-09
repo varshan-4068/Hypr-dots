@@ -15,7 +15,7 @@ imagebox {
     padding: 20px;
 		margin: 12px;
     background-color: transparent;
-    background-image: url("arch.jpg", height);
+    background-image: url("~/.config/backgrounds/lp.png", height);
     orientation: vertical;
 		children: [ "inputbar", "dummy", "mode-switcher" ];
 		border-radius: 4px;
@@ -27,7 +27,7 @@ mode-switcher {
     background-color: #000000;
 		text-color: #f38ba8;
 		border: 3px solid;
-		border-color: #ff3361;
+		border-color: #000000;
 		border-radius: 3px;
 }
 
@@ -35,12 +35,12 @@ button {
 		cursor: pointer;
     border-radius:  2px;
 		padding:15px;
-    background-color: #ff3361;
-    text-color:#000000;
+    background-color: #000000;
+    text-color:#cdd6f4;
 }
 
 button selected {
-    background-color: #0400ff;
+    background-color: #cdd6f4;
     text-color: #000000;
 }
 
@@ -64,7 +64,7 @@ listview {
 }
 
 scrollbar{
-		background-color: #ff3361;
+		background-color: #000000;
 		text-color: #cdd6f4;
 		handle-color: #cdd6f4;
 		handle-width: 8px;
@@ -73,8 +73,8 @@ scrollbar{
 window {
     width:900px;
     border-radius: 10px;
-		border: 4px solid;
-		border-color: #ff3361;
+		border: 1px solid;
+		border-color: #cdd6f4;
     background-color: #000000CC;
 }
 
@@ -83,7 +83,7 @@ inputbar {
     spacing: 10px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #ff3361;
+    background-color: #000000;
     text-color:  #000000;
     children:[ "textbox-prompt-colon", "entry" ];
 }
@@ -97,10 +97,10 @@ textbox-prompt-colon {
 
 entry {
 		enabled: true;
-    text-color:                  #000000;
+    text-color:                  #cdd6f4;
     cursor:                      text;
     placeholder:                 "Search";
-    placeholder-color:           #000000;
+    placeholder-color:           #cdd6f4;
 }
 
 mainbox {
@@ -131,18 +131,18 @@ element alternate.normal {
 
 element selected.active {
 	background-color: transparent;
-	text-color: #ff3361;
+	text-color: #cdd6f4;
 	border-radius: 2px;
 	border: 4px;
-	border-color: #ff3361;
+	border-color: #000000;
 }
 
 element selected.normal {
-	background-color: #ff3361;
-	text-color: #000000;
+	background-color: #000000;
+	text-color: #cdd6f4;
 	border-radius: 2px;
-	border-color: #000000;
-	border: 3px solid;
+	border-color: #cdd6f4;
+	border: 1px solid;
 }
 
 message {

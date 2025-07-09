@@ -1,5 +1,5 @@
 * {
-    font: "cantarell bold 13";
+    font: "cantarell bold 12";
 }
 
 configuration {
@@ -17,22 +17,22 @@ mode-switcher {
     padding: 10px;
 		spacing: 10px;
     background-color: #000000;
-		text-color: #f38ba8;
+		text-color: #000000;
 		border: 0px solid;
-		border-color: #ff3361;
+		border-color: #cdd6f4;
 		border-radius: 3px;
 		orientation: horizontal;
 }
 
 button {
-    border-radius:  0px;
+    border-radius:0px;
 		padding: 5px;
-    background-color: #ff3361;
-    text-color:#000000;
+    background-color: #000000;
+    text-color:#cdd6f4;
 }
 
 button selected {
-    background-color: #0400ff;
+    background-color: #cdd6f4;
     text-color: #000000;
 }
 
@@ -54,7 +54,7 @@ listview {
 }
 
 scrollbar{
-		background-color: #ff3361;
+		background-color: #000000;
 		text-color: #cdd6f4;
 		handle-color: #cdd6f4;
 		handle-width: 8px;
@@ -63,8 +63,8 @@ scrollbar{
 window {
     width:400px;
     border-radius: 2px;
-		border: 2px solid;
-		border-color: #ff3361;
+		border: 1px solid;
+		border-color: #cdd6f4;
     background-color: #000000CC;
 }
 
@@ -72,7 +72,7 @@ inputbar {
 		enabled: true;
     padding: 10px;
     border-radius: 0px;
-    background-color: #0400ff;
+    background-color: #cdd6f4;
 		margin: 12px;
     text-color:  #000000;
     children:[ "textbox-prompt-colon", "entry" ];
@@ -121,23 +121,23 @@ element alternate.normal {
 
 element selected.active {
 	background-color: transparent;
-	text-color: #ff3361;
+	text-color: #cdd6f4;
 	border-radius: 2px;
 	border: 4px;
-	border-color: #ff3361;
+	border-color: #cdd6f4;
 }
 
 element selected.normal {
-	background-color: #ff3361;
-	text-color: #000000;
+	background-color: #000000;
+	text-color: #cdd6f4;
 	border-radius: 2px;
-	border-color: #000000;
-	border: 3px solid;
+	border-color: #cdd6f4;
+	border: 1px solid;
 }
 
 error-message {
-    background-color: #ff3361;
-		text-color: #000000;
+    background-color: #000000;
+		text-color: #cdd6f4;
 }
 
 
