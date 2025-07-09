@@ -30,6 +30,7 @@ alias rm='rm -r'
 alias mkdir='mkdir -p'
 alias ls='eza --color=auto --group-directories-first'
 alias nv='fzf --preview "less {}" | xargs -ro nvim'
+alias v='fzf --preview "less {}" | xargs -ro vim'
 alias grubmk='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias rl='source .bashrc'
 alias pacsyu='sudo pacman -Syu'
@@ -96,6 +97,10 @@ fi
 
 if [[ $- == *i* ]]; then   # nvim with fzf integretion
 	  bind '"\C-n":"nv\n"'
+fi
+
+if [[ $- == *i* ]]; then   # nvim with fzf integretion
+	  bind '"\C-v":"v\n"'
 fi
 
 # whenever doing cd the ll will be executed too
