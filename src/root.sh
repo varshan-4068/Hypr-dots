@@ -40,7 +40,7 @@ case "$dots" in
 	cd root/ || return
 	sudo cp .bashrc .bash_profile /root
 
-	if [ ! -d /root/.config/ ]; then 
+	if [ -d /root/.config/ ]; then 
 		sudo mkdir /root/.config/
 	fi
 
