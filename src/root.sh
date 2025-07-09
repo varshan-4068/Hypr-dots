@@ -46,7 +46,7 @@ case "$dots" in
 
 	sudo cp -r nvim/ starship.toml alacritty/ /root/.config/
 
-	if [ ! -f /root/.cache/ ]; then 
+	if [ ! -d /root/.cache/ ]; then 
 		sudo rm -r /root/.cache
 	fi
 
