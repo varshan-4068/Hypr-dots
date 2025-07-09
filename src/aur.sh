@@ -6,7 +6,7 @@ paru=(
 	battop #battery stats 
 	waypaper	#wallpaper selector
 	multitail
-	python-pywal16 #pywal 
+	python-pywal16-git #pywal 
 	sc-im #spreedsheet vim based 
 	librewolf-bin #fork firefox browser focuses majorly on privacy.
 )
@@ -20,7 +20,7 @@ else
 	gum confirm " :: Do u wanna install the paru aur helper? (y/n): " && aur="yes" || aur="no"
 
 	case "$aur" in
-		[yes*])
+		[yes]*)
 			echo " :: Installing paru ( AUR helper ) ::"
 			git clone https://aur.archlinux.org/paru.git
 			cd paru/ || return
@@ -43,6 +43,7 @@ else
 			;;
 
 		esac
+		break
 	fi
 
 done
