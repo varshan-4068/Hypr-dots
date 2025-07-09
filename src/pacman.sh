@@ -20,6 +20,7 @@ dependencies=(
 	gtk-engine-murrine #must for tokyonight colorscheme to work
 	capitaine-cursors #must
 	shellcheck #must for nvim bash linter
+	nautilus #file manager
 	hyprpaper #must
 	bat #must
 	flatpak #optional
