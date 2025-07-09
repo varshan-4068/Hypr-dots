@@ -3,7 +3,7 @@
 paru=(
 	hyprshot	#screenshot utility
 	timeshift-autosnap	#timeshift snapshot automation 
-	graphite-gtk-theme-black-rimless.git #gtk theme must
+	graphite-gtk-theme-black-rimless-git #gtk theme must
 	battop #battery stats 
 	waypaper	#wallpaper selector
 	multitail
