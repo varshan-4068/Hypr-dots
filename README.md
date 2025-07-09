@@ -3,12 +3,10 @@
 
 ![system](https://github.com/user-attachments/assets/88498be2-581c-40af-ac1c-272678616e73)
 
-This Repo is an Stable release repo of my dotfiles for Rolling release checkout [My gitlab repo](https://gitlab.com/varshan-4068/Hyprland-Arch)
-
 To Install my Dotfiles,etc Run the commands below....
 
     git clone https://github.com/varshan-4068/Hypr-dots.git
-    sudo pacman -S gum
+    sudo pacman -S gum timeshift grub-btrfs
     cd Hypr-dots/
     chmod +x install.sh
     ./install.sh
@@ -21,7 +19,7 @@ To Install my Dotfiles,etc Run the commands below....
 > 
 > *If u have a scaling factor greater than 1.0 then u might have issues in wayland with fractional scaling so the solution is refer ~/config/hypr/monitors.conf to get an idea*
 
-And using nwg-look select your icon and gtk theme as Graphite ...
+And using nwg-look select your icon and gtk theme...
 
 These were my Configuration Files With Graphite Themed GTK Setup.... 
 
