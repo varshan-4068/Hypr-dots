@@ -7,15 +7,20 @@ dependencies=(
 	wget #must
 	eza #must
 	less #must
+	collision #if u want to check hashes or like checksum of the files like .iso or .zip
+	video-trimmer #if u want to trim a video
 	gum #must
-	nemo #must
+	cameractrls #must for taking good quality pictures
+	gnome-software #must if u want to install flatpaks with gui's..
+	pdfslicer #if u want to delete or merge some pages of a pdf..
+	decoder #if u want to generate or scan a QRcode 
+	morphosis #if u want to convert some format like .docx to pdf u can use this 
 	base-devel #must
 	gnome-disk-utility #optional
 	gtk-engine-murrine #must for tokyonight colorscheme to work
 	capitaine-cursors #must
 	shellcheck #must for nvim bash linter
 	hyprpaper #must
-	firefox #must
 	bat #must
 	flatpak #optional
 	gcc #must
@@ -38,6 +43,7 @@ dependencies=(
 	qutebrowser #vim browser
 	pavucontrol #sound
 	ttf-font-awesome  #must
+	ttf-meslo-nerd #must for kitty
 	python-adblock #must
 	python-pynvim #must
 	cheese #camera optional
@@ -68,6 +74,7 @@ dependencies=(
 	fastfetch #optional
 	yt-dlp #needed for playing youtube videos in mpv via qutebrowser
 	ttf-jetbrains-mono
+	ttf-fira-code #needed for waybar fonts
 	ttf-jetbrains-mono-nerd
 	net-tools
 	zoxide #must

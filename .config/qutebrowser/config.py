@@ -208,11 +208,7 @@ config.bind(
     "config-cycle statusbar.show always never;; config-cycle tabs.show always never",
 )
 
-config.bind("<Ctrl-R>", "open https://gitlab.com/varshan2007/Hyprland-Arch.git")
-
 config.bind("<Ctrl-Y>", "open https://www.youtube.com/?gl=IN")
-
-config.bind("<Ctrl-M>", "spawn mpv {url}")
 
 config.bind("<Ctrl-Shift-M>", "hint links spawn mpv {hint-url}")
 
@@ -251,7 +247,7 @@ c.content.blocking.adblock.lists = [
     "https://easylist.to/easylist/fanboy-social.txt",
 ]
 
-config.set("qt.highdpi", True)
+config.set("qt.highdpi", False)
 
 config.set("qt.chromium.experimental_web_platform_features", "never")
 

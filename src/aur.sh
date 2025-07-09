@@ -8,6 +8,7 @@ paru=(
 	multitail
 	python-pywal16 #pywal 
 	sc-im #spreedsheet vim based 
+	librewolf-bin #fork firefox browser focuses majorly on privacy.
 )
 
 

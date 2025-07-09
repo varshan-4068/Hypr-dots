@@ -45,7 +45,7 @@
 
 
     "custom/updater":{ 
-        "format":"   {} U",
+        "format":"  {} U",
         "exec": "pacman -Qu | wc -l",
         "interval": 300,
 				"tooltip-format": "Pacman",
@@ -59,7 +59,7 @@
 		},
 
     "custom/yay":{
-        "format": "  UR  {} U",
+        "format": " UR {} U",
         "exec": "paru -Qu | wc -l",
 				"interval": 300,
 				"tooltip-format":"Arch User Repository" ,
@@ -69,7 +69,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "   {used:0.1f} GB",
+        "format": "  {used:0.1f} GB",
 				"tooltip": true,
         "min-length": 2,
 				"on-click": "alacritty -e bash -ic 'htop'",
@@ -95,7 +95,7 @@
         "scroll-step": 1
     },
     "custom/logo": {
-        "format": "💻  ARCH BTW",
+        "format": "💻 ARCH BTW",
         "tooltip": false,
 				"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/waybar.sh'",
     },
@@ -141,28 +141,28 @@
     
     "custom/cpufreq":{
         "on-click": "alacritty -e bash -ic 'clear; auto-cpufreq --stats'",
-				"format": "   CPU",
+				"format": " CPU",
 				"min-length": 5,
 				"tooltip": false,
     },
 
     "custom/timeshift":{
         "on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/timeshift.sh'",
-				"format":"  Timeshift",
+				"format":" Timeshift",
 				"tooltip-format": "Timeshift",
 				"min-length":1,
     },
 
     "custom/ani-cli":{
         "on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/ani-cli.sh'",
-				"format":"  Ani-cli",
+				"format":" Ani-cli",
 				"tooltip": false,
     },
 
     "backlight":{
         "device": "{}",
 				"exec": "ls /sys/class/backlight",
-        "format": "{percent}%  {icon}",
+        "format": "{percent}% {icon}",
 				"tooltip-format": "Brightness",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
 				"on-click": "alacritty -e bash -ic 'clear; brightnessctl ; sleep 4 ; exit' && notify-send -t 4000 'Keep Your Brightness Level Between 20 to 30 to Save The Battery Life For Nearly 4 Hours'"

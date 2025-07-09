@@ -40,6 +40,11 @@ case "$dots" in
 	cd root/ || return
 	sudo cp .bashrc .bash_profile /root
 	sudo cp -r nvim/ starship.toml alacritty/ /root/.config/
+
+	if [ ! -f /root/.cache/ ]; then 
+		sudo rm -r /root/.cache
+	fi
+
 	sudo mkdir -p .cache/ /root 
 	sudo cp -r ~/.cache/wal/ /root/.cache
 	sudo ln -sf ~/.cache/wal/sequences /root/.cache/wal/sequences

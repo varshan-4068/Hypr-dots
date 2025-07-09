@@ -78,6 +78,7 @@ while true;do
 			echo
 			echo " :: Successfully installed the configuration files of Dark pink theme ::"
 			sleep 0.2
+			echo 
 			break
 			;;
 		[w]*)
@@ -90,6 +91,7 @@ while true;do
 			cp config style.css ~/.config/waybar
 			echo " :: Successfully installed the configuration files of Colorful Waybar theme ::"
 			sleep 0.2
+			echo 
 			break
 			;;
 		[n]*)
@@ -129,8 +131,6 @@ my_dir=~/.config/rofi/
 if [ -d my_dir ]; then
 	mkdir ~/.config/rofi
 fi
-
-echo 
 
 cd $my_dir
 

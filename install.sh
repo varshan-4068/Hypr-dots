@@ -30,10 +30,7 @@ source $dot_dir/cpufreq.sh
 #sourcing ani-cli installation tool.
 source $dot_dir/ani-cli.sh
 
-cd $dot_dir
-
-#sourcing the theme installation scripts..
-source $dot_dir/theme.sh
+source $dot_dir/print_logo.sh
 
 #sourcing the icon installation scripts..
 source $dot_dir/icon.sh

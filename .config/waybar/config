@@ -38,7 +38,7 @@
 	},
 
 	"custom/updates":{
-		"format": "<span color='#1e90ff'>  UR</span>  {} U",
+		"format": "<span color='#1e90ff'> UR</span> {} U",
 		"exec": "paru -Qu | wc -l",
 		"interval": 300,
 		"tooltip-format":"Arch User Repository" ,
@@ -47,7 +47,7 @@
 	},
 
 	"custom/updater":{ 
-		"format":"<span color='#1e90ff'> </span>  {} U",
+		"format":"<span color='#1e90ff'> </span> {} U",
 		"exec": "pacman -Qu | wc -l",
 		"interval": 300,
 		"tooltip-format": "Pacman",
@@ -66,7 +66,7 @@
 		"tooltip": true,
 		"min-length": 2,
 		"on-click": "alacritty -e  bash -ic 'clear;htop'",
-		"tooltip-format": "  {used:0.1f}GB/{total:0.1f}GB"
+		"tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
 	},
 
  "clock": {
@@ -75,7 +75,7 @@
 	},
 
  "wireplumber": {
-		"format": "Vol = {volume} %",
+		"format": "Vol = {volume}%",
 		"tooltip": true,
 		"tooltip-format": "Volume : {volume}%",
 		"format-bluetooth": "󰂰 ",
@@ -90,7 +90,7 @@
 	},
 
 	"custom/theme":{
-		"format": "   ARCH BTW ",
+		"format": "  ARCH BTW ",
 		"tooltip": false,
 		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/waybar.sh'"
 	},
@@ -139,7 +139,7 @@
 	"backlight":{
 			"device": "{}",
 			"exec": "ls /sys/class/backlight",
-			"format": "{percent}%  <span color='#FFD700'>{icon}</span>",
+			"format": "{percent}% <span color='#FFD700'>{icon}</span>",
 			"tooltip-format": "Brightness",
 			"format-icons": ["", "", "", "", "", "", "", "", ""],
 			"on-click": "alacritty -e bash -ic 'clear ;brightnessctl ; sleep 4 ; exit' && notify-send -t 4000 'Keep Your Brightness Level Between 20 to 30 to Save The Battery Life For Nearly 4 Hours'"
@@ -147,14 +147,14 @@
 
 	"cpu":{
 		"on-click": "alacritty -e  bash -ic 'clear; auto-cpufreq --stats' && notify-send -t 4000 'Maintain CPU Temperature'",
-		"format": "<span color='#f38ba8'>  </span>CPU",
+		"format": "<span color='#f38ba8'> </span>CPU",
 		"min-length": 5,
 		"tooltip": false,
 	},
 
 	"custom/timeshift":{
 		"on-click": "alacritty -e bash -ic 'clear; ./.config/waybar/scripts/timeshift.sh'",
-		"format":"<span color='#ff0000'> </span> T",
+		"format":"<span color='#ff0000'> </span>T",
 		"tooltip-format": "Timeshift",
 		"min-length":1,
   },

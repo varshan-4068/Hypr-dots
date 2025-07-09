@@ -5,9 +5,11 @@ while true;do
 	gum confirm " :: Do u Wanna Install the Dracula Icon Theme ? (y/n): " && icons="yes" || icons="no"
 
 	case "$icons" in 
-		
+
 		[yes]*)
 		
+		echo 
+
 		icon=~/.icons/
 		zip=Dracula.zip
 

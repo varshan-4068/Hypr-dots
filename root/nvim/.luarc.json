@@ -31,6 +31,7 @@
     ],
     "diagnostics.disable": [
         "unused-local",
-        "redundant-value"
+        "redundant-value",
+        "need-check-nil"
     ]
 }

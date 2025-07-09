@@ -14,7 +14,7 @@ vim.keymap.set('v', '>', '>gv',opts)
 vim.keymap.set('v', 'p', '"_dP',opts)
 
 --keybindings for telescope
-vim.keymap.set('n', '<C-f>', ':Telescope find_files<CR>', {noremap = true, silent = true })
+vim.keymap.set('n', '<C-f>', '<cmd>Telescope find_files hidden=true<cr>', {noremap = true, silent = true })
 
 --keybinding for code actions
 

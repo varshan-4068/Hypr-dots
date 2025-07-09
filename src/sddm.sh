@@ -43,6 +43,9 @@ case "$sddm_theme" in
 	sudo cp ~/Hypr-dots/sddm/sddm.conf /etc
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
 	sudo cp ~/Hypr-dots/sddm/sddm.conf /etc
+	if [ -d "/usr/share/sddm/themes/sddm-astronaut-theme" ]; then
+    notify-send "sddm-astronaut-theme was installed successfully!"
+	fi
 	echo 
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
 	echo
@@ -55,6 +58,9 @@ case "$sddm_theme" in
 	sudo cp -r ~/Hypr-dots/sddm/sddm-theme/ /usr/share/sddm/themes/
 	gum spin --spinner line --title="Installing the maldives Inspired sddm theme.." sleep 3.8
 	echo
+	if [ -d "/usr/share/sddm/themes/sddm-theme" ]; then
+    notify-send "sddm-theme was installed successfully!"
+	fi
 	echo " :: Everything is Installed perfectly just reboot your system to get perfect results ::"
 	echo 
 	echo 

@@ -32,7 +32,7 @@ gum confirm " :: Do u wanna install Dotfiles and some other files? (y/n): " && d
 case "$dot" in 
 [yes]*)
 
-	wallpaper=~/.config/backgrounds/fr.png
+	wallpaper=~/.config/backgrounds/ca.png
 	conf=~/.config
 	usr=/usr/bin
 	bash=mybash/
@@ -67,7 +67,6 @@ case "$dot" in
 	cd src/ || return
 	sudo cp rofi-power-menu $usr
 	sudo chmod +x restore.sh 
-	sudo chmod +x theme.sh 
 	sudo chmod +x icon.sh
 	cd $conf/waybar/scripts/ || return
 	sudo chmod +x ani-cli.sh aur.sh disk_script.sh pacman.sh timeshift.sh waybar.sh
