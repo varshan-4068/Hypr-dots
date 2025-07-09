@@ -1,7 +1,7 @@
 
 # *Hypr-dots*
 
-![system](https://github.com/user-attachments/assets/eec7025a-fce6-474c-9f09-42bb7ec35aef)
+![system](https://github.com/user-attachments/assets/88498be2-581c-40af-ac1c-272678616e73)
 
 This Repo is an Stable release repo of my dotfiles for Rolling release checkout [My gitlab repo](https://gitlab.com/varshan-4068/Hyprland-Arch)
 
@@ -19,15 +19,13 @@ To Install my Dotfiles,etc Run the commands below....
 >
 > *After Installing my script reboot your system for the effective Experience of the configs..*
 > 
-> *These Dotfiles were made for 1980 x 1080 Resolutions only so to use with other Resolutions configure the dotfiles accordingly*
-> 
 > *If u have a scaling factor greater than 1.0 then u might have issues in wayland with fractional scaling so the solution is refer ~/config/hypr/monitors.conf to get an idea*
 
-And using nwg-look select your icon and gtk theme as Tokyonight or Graphite ...
+And using nwg-look select your icon and gtk theme as Graphite ...
 
-These were my Configuration Files With Tokyonight & Graphite Themed GTK Setup.... 
+These were my Configuration Files With Graphite Themed GTK Setup.... 
 
-![tokyonight-dark](https://github.com/user-attachments/assets/9eb887ff-269a-4bbf-9f19-9d33829f4d1d)
+![graphite](https://github.com/user-attachments/assets/2c703046-9121-4997-9fc8-a55f8c4972a0)
 
 > [!Tip]
 >
@@ -39,11 +37,18 @@ These were my Configuration Files With Tokyonight & Graphite Themed GTK Setup...
 
 |   Application   |                Keybindings              |
 |---------------- | ----------------------------------------|
-|    Alacritty    |   <kbd>Super</kbd> + <kbd>Return</kbd>  | 
-|      Rofi       |   <kbd>Super</kbd> + <kbd>A</kbd>       |
-|   qutebrowser   |   <kbd>Super</kbd> + <kbd>Q</kbd>       |
-|    Nautilus    |   <kbd>Super</kbd> + <kbd>E</kbd>       | 
-| Waybar Toggling |   <kbd>Super</kbd> + <kbd>P</kbd>       |
+|    Alacritty    |   <kbd>SUPER</kbd> + <kbd>RETURN</kbd>  | 
+|      Rofi       |   <kbd>SUPER</kbd> + <kbd>A</kbd>       |
+|   qutebrowser   |   <kbd>SUPER</kbd> + <kbd>Q</kbd>       |
+|    Nautilus    |   <kbd>SUPER</kbd> + <kbd>E</kbd>       | 
+| Waybar Toggling |   <kbd>SUPER</kbd> + <kbd>P</kbd>       |
+|     Waypaper    |   <kbd>SUPER</kbd> + <kbd>W</kbd>       |
+| yazi(alacritty) |   <kbd>SUPER</kbd> + <kbd>Y</kbd>       | 
+|     kitty       |   <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>RETURN</kbd> |
+|     Neovim      |   <kbd>SUPER</kbd> + <kbd>N</kbd>       |
+|    Librewolf    |   <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>L</kbd> | 
+|   yazi(kitty)   |   <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Y</kbd> |
+
 
 |                 Keys                | Action      |
 | ----------------------------------- | ----------- |
@@ -51,9 +56,13 @@ These were my Configuration Files With Tokyonight & Graphite Themed GTK Setup...
 | <kbd>SUPER</kbd> + <kbd>Right</kbd> | focus right |
 | <kbd>SUPER</kbd> + <kbd>Up</kbd>    | focus up    |
 | <kbd>SUPER</kbd> + <kbd>Down</kbd>  | focus down  |
+| <kbd>SUPER</kbd> + <kbd>J</kbd>     | ToggleSplit | 
+| <kbd>SUPER</kbd> + <kbd>T</kbd>     | Floating to resize Window | 
+| Screenshot a region | <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> | 
+| Screenshot whole screen | <kbd>PRINTSCREEN</kbd> |
+| Screenshot a window | <kbd>SUPER</kbd> + <kbd>PRINTSCREEN</kbd> |
 
 => For More Keybindings Refer ~/.config/hypr/keybindings.conf
-
 
 # *Swww*
 
@@ -62,7 +71,7 @@ These were my Configuration Files With Tokyonight & Graphite Themed GTK Setup...
 > *Use Waypaper to change Wallpapers if u have a little good hardware because in a little old hardware the waypaper loads wallpapers a little slowly, just give it a try ...*
 >
 
-![waypapers](https://github.com/user-attachments/assets/5a37b3dd-3632-4bc4-aa1a-fc93748837bd)
+![waypaper](https://github.com/user-attachments/assets/808bc8f5-04af-4cd1-833b-ed42e209ecb0)
 
 --> *To Install waypaper in arch linux* , 
 
