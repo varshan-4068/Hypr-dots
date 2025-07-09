@@ -31,7 +31,7 @@ case "$chris" in
 		echo 
 		echo " :: Cloning Themes ::"
 		echo
-		git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes.git ~
+		git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes.git $HOME
 		cd ~/Top-5-Bootloader-Themes/ || return
 		sudo ./install.sh ## then select the theme u wanted u install 
 		cd ~ || return
