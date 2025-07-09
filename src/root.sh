@@ -39,6 +39,11 @@ case "$dots" in
 	echo
 	cd root/ || return
 	sudo cp .bashrc .bash_profile /root
+
+	if [ -f /root/.config/ ]; then 
+		sudo mkdir -p /root/.cache
+	fi
+
 	sudo cp -r nvim/ starship.toml alacritty/ /root/.config/
 
 	if [ ! -f /root/.cache/ ]; then 
