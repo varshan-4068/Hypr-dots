@@ -41,7 +41,7 @@ case "$dots" in
 	sudo cp .bashrc .bash_profile /root
 
 	if [ -f /root/.config/ ]; then 
-		sudo mkdir -p /root/.cache
+		sudo mkdir /root/.config/
 	fi
 
 	sudo cp -r nvim/ starship.toml alacritty/ /root/.config/
