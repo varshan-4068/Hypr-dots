@@ -57,10 +57,10 @@ These were my Configuration Files With Graphite Themed GTK Setup....
 | <kbd>SUPER</kbd> + <kbd>Up</kbd>    | focus up    |
 | <kbd>SUPER</kbd> + <kbd>Down</kbd>  | focus down  |
 | <kbd>SUPER</kbd> + <kbd>J</kbd>     | ToggleSplit | 
-| <kbd>SUPER</kbd> + <kbd>T</kbd>     | Floating Window to resize window | 
+| <kbd>SUPER</kbd> + <kbd>T</kbd>     | Floating to resize Window | 
 | Screenshot a region | <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> | 
 | Screenshot whole screen | <kbd>PRINTSCREEN</kbd> |
-| Screenshoft a window | <kbd>SUPER</kbd> + <kbd>PRINTSCREEN</kbd> |
+| Screenshot a window | <kbd>SUPER</kbd> + <kbd>PRINTSCREEN</kbd> |
 
 => For More Keybindings Refer ~/.config/hypr/keybindings.conf
 
