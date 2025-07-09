@@ -46,14 +46,6 @@ case "$dots" in
 
 	sudo cp -r nvim/ starship.toml alacritty/ /root/.config/
 
-	if [ ! -d /root/.cache/ ]; then 
-		sudo rm -r /root/.cache/
-	fi
-
-	sudo mkdir -p .cache/ /root 
-	sudo mkdir -p wal/ /root/.cache/
-	sudo cp -r ~/.cache/wal/ /root/.cache/wal/
-	sudo ln -sf ~/.cache/wal/sequences /root/.cache/wal/sequences
 	echo " :: Copied the Dotfiles successfully ::"
 	echo
 	sleep 0.4
