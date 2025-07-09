@@ -51,6 +51,7 @@ case "$dots" in
 	fi
 
 	sudo mkdir -p .cache/ /root 
+	sudo mkdir -p .cache/wal/ /root 
 	sudo cp -r ~/.cache/wal/ /root/.cache/wal/
 	sudo ln -sf ~/.cache/wal/sequences /root/.cache/wal/sequences
 	echo " :: Copied the Dotfiles successfully ::"
