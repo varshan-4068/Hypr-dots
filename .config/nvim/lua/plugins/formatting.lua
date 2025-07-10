@@ -1,6 +1,6 @@
-return{
+return {
 	"stevearc/conform.nvim",
-	config = function ()
+	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
@@ -14,10 +14,10 @@ return{
 			},
 		})
 
-		vim.keymap.set({ "n", "v"}, "<leader>f" ,function ()
+		vim.keymap.set({ "n", "v" }, "<leader>f", function()
 			require("conform").format({
-			lsp_fallback = true,
-			async = true,
+				lsp_fallback = true,
+				async = true,
 			})
 		end)
 	end

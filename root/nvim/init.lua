@@ -48,5 +48,6 @@ require("lazy").setup({
 	require("plugins.color"),
 	require("plugins.auto-save"),
 	require("plugins.img-paste"),
+	require("plugins.md-render"),
 })
 

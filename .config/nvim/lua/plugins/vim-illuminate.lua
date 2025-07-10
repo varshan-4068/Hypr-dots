@@ -1,6 +1,6 @@
-return{
+return {
 	'RRethy/vim-illuminate',
-	config = function ()
+	config = function()
 		vim.g.Illuminate_delay = 500
 	end
 }
