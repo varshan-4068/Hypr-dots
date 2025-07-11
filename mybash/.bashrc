@@ -22,6 +22,9 @@ export CLICOLOR=1
 export FZF_DEFAULT_OPTS=' --height=45% --layout=reverse --border=bold --no-info --highlight-line --no-scrollbar --list-label=" SEARCH FOR ANY FILE " --list-border=sharp --preview-label=" PREVIEW OF THE FILE " --preview-border=sharp ' 
 export HISTCONTROL=erasedups
 export MANPAGER="nvim +Man!"
+export HISTSIZE=500
+export HISTTIMEFORMAT="%F %T"
+export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 # alias section
 alias grep='grep --color=auto'
@@ -46,6 +49,7 @@ alias .='cd ../'
 alias ..='cd ../../'
 alias ...='cd ../../../'
 alias h='history'
+alias f='find . | grep'
 alias check='journalctl -xb -p 3'
 alias cpu='auto-cpufreq --stats'
 alias bar='waybar &'

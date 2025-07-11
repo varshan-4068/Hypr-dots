@@ -13,7 +13,13 @@ vim.keymap.set('v', '>', '>gv', opts)
 vim.keymap.set('v', 'p', '"_dP', opts)
 
 --keybindings for telescope
-vim.keymap.set('n', '<C-f>', '<cmd>Telescope find_files hidden=true<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true, silent = true })
 
 --keybinding for code actions
 
@@ -21,7 +27,7 @@ vim.keymap.set('n', '<C-a>', vim.lsp.buf.code_action, opts)
 
 --keybinding for tmux
 
-vim.keymap.set('n', '<C-t>', ':term tmux<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>t', ':term tmux<CR>', { noremap = true, silent = true })
 
 --keybinding for closing buffer
 
@@ -54,3 +60,8 @@ vim.keymap.set('n', '<leader>re', '<cmd> RenderMarkdown enable<CR>')
 vim.keymap.set('n', '<leader>rt', '<cmd> RenderMarkdown toggle<CR>')
 
 vim.keymap.set('n', '<leader>rl', '<cmd> RenderMarkdown log<CR>')
+
+--keymap for urlview 
+
+vim.keymap.set("n", "<leader>u", "<Cmd>UrlView<CR>", { desc = "View buffer URLs" })
+

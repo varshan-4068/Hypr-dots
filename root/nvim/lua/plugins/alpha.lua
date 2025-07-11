@@ -26,8 +26,6 @@ return {
 			dashboard.button("q", "  > Quit NVIM", "<cmd>qa<CR>"),
 		}
 
-		vim.cmd [[autocmd User AlphaReady echo 'Ready']]
-
 		alpha.setup(dashboard.opts)
 	end,
 }

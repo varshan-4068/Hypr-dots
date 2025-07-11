@@ -8,8 +8,8 @@ return {
 	config = function()
 		require('bufferline').setup {
 			options = {
-				mode = 'buffers',         -- set to "tabs" to only show tabpages instead
-				numbers = 'ordinal',      -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+				mode = 'buffers',          -- set to "tabs" to only show tabpages instead
+				numbers = 'ordinal',       -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 				close_command = 'Bdelete! %d', -- can be a string | function, see "Mouse actions"
 				buffer_close_icon = '✗',
 				close_icon = '',
@@ -24,9 +24,9 @@ return {
 				show_close_icon = true,
 				persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
 				show_tab_indicators = true,
-				separator_style = { '│', '│' },
+				-- separator_style = { '│', '│' },
 				indicator = {
-					style = 'underline', -- Options: 'icon', 'underline', 'none'
+					style = 'icon', -- Options: 'icon', 'underline', 'none'
 				},
 				icon_pinned = '󰐃',
 				minimum_padding = 8,

@@ -5,35 +5,34 @@ return {
 		require('lualine').setup {
 			options = {
 				icons_enabled = true,
-				theme = 'horizon',
-				component_separators = { left = '', right = '' },
-				section_separators = { left = '', right = '' },
+				theme = 'auto',
+				component_separators = '',
+				section_separators = { left = '', right = '' },
 				disabled_filetypes = {
 					statusline = {},
 					winbar = {},
 				},
 				ignore_focus = {},
-				always_divide_middle = true,
 				always_show_tabline = true,
 				globalstatus = true,
 				refresh = {
-					statusline = 100,
-					tabline = 100,
-					winbar = 100,
+					statusline = 1000,
+					tabline = 1000,
 				}
 			},
 			sections = {
-				lualine_a = { 'mode' },
-				lualine_b = { 'branch', 'diff', 'diagnostics' },
-				lualine_c = { 'filename' },
-				lualine_x = { 'encoding', 'fileformat', 'filetype' },
-				lualine_y = { 'progress' },
-				lualine_z = { 'location' }
+				lualine_a = { { 'mode', separator = { left = '' }, left_padding = 2 } },
+				lualine_b = { { 'filename', 'branch', separator = { right = '' }, left_padding = 2 } },
+				lualine_c = { 'filetype', 'encoding', 'fileformat' },
+				lualine_x = {},
+				lualine_y = { { 'progress' } },
+				lualine_z = {
+					{ 'location', separator = { right = '' }, left_padding = 2 },
+				},
 			},
 
 			tabline = {},
-			winbar = {},
-			extensions = {}
+			extensions = {},
 		}
 	end,
 }
