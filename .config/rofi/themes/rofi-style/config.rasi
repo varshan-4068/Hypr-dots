@@ -1,5 +1,7 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
 * {
-    font: "cantarell bold 12";
+	font: "Jetbrains Mono Bold 11";
 }
 
 configuration {
@@ -16,29 +18,26 @@ configuration {
 mode-switcher {
     padding: 10px;
 		spacing: 10px;
-    background-color: #000000;
-		text-color: #000000;
-		border: 0px solid;
-		border-color: #cdd6f4;
-		border-radius: 3px;
+    background-color: transparent;
+		text-color: @foreground;
 		orientation: horizontal;
 }
 
 button {
     border-radius:0px;
 		padding: 5px;
-    background-color: #000000;
-    text-color:#cdd6f4;
+    background-color: @foreground;
+    text-color:@background;
 }
 
 button selected {
-    background-color: #cdd6f4;
-    text-color: #000000;
+    background-color: @urgent-background;
+    text-color: @background;
 }
 
 listbox {
     children: ["inputbar","listview","mode-switcher"];
-    background-color: rgba(53,59,50,0.2);
+    background-color: @background;
 }
 
 listview {
@@ -54,27 +53,28 @@ listview {
 }
 
 scrollbar{
-		background-color: #000000;
-		text-color: #cdd6f4;
-		handle-color: #cdd6f4;
+		background-color: @background;
+		text-color: @foreground;
+		handle-color: @foreground;
 		handle-width: 8px;
 }
 
 window {
     width:400px;
-    border-radius: 2px;
-		border: 1px solid;
-		border-color: #cdd6f4;
-    background-color: #000000CC;
+    border-radius: 5px;
+		border : 1px solid; 
+		border-color : @foreground;
+    background-color: transparent;
+    padding: 0px;
 }
 
 inputbar {
 		enabled: true;
     padding: 10px;
     border-radius: 0px;
-    background-color: #cdd6f4;
+    background-color: @background;
 		margin: 12px;
-    text-color:  #000000;
+    text-color:  @foreground;
     children:[ "textbox-prompt-colon", "entry" ];
 }
 
@@ -87,10 +87,10 @@ textbox-prompt-colon {
 
 entry {
 		enabled: true;
-    text-color: #000000;
+    text-color: @foreground ;
     cursor: text;
     placeholder: "Search";
-    placeholder-color: #000000;
+    placeholder-color: @foreground;
 }
 
 mainbox {
@@ -111,33 +111,25 @@ element {
 
 element normal.normal {
 	background-color: transparent;
-	text-color: #cdd6f4;
 }
 
 element alternate.normal {
-	text-color: #cdd6f4;
 	background-color: transparent;
 }
-
+	
 element selected.active {
-	background-color: transparent;
-	text-color: #cdd6f4;
-	border-radius: 2px;
-	border: 4px;
-	border-color: #cdd6f4;
+	text-color: @background;
 }
 
 element selected.normal {
-	background-color: #000000;
-	text-color: #cdd6f4;
+	text-color: @background;
 	border-radius: 2px;
-	border-color: #cdd6f4;
 	border: 1px solid;
+	background-color: @urgent-background;
 }
 
 error-message {
-    background-color: #000000;
-		text-color: #cdd6f4;
+		text-color: @background;
 }
 
 

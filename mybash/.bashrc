@@ -107,11 +107,16 @@ if [[ $- == *i* ]]; then   # nvim with fzf integretion
 	  bind '"\C-v":"v\n"'
 fi
 
+manfzf(){
+	man -k . | fzf | awk '{print $1}' | xargs -ro man 
+}
+
 # whenever doing cd the ll will be executed too
 cd() {
 	builtin cd "$@" || return
 	ll
 }
+
 
 # bash_completion section
 if [ -f /etc/bash_completion ]; then

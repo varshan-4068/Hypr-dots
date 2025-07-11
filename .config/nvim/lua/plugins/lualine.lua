@@ -22,12 +22,12 @@ return {
 			},
 			sections = {
 				lualine_a = { { 'mode', separator = { left = '' }, left_padding = 2 } },
-				lualine_b = { { 'filename', 'branch', separator = { right = '' }, left_padding = 2 } },
-				lualine_c = { 'filetype', 'encoding', 'fileformat' },
+				lualine_b = { { 'filename', separator = { right = '' }, left_padding = 2 } },
+				lualine_c = {},
 				lualine_x = {},
-				lualine_y = { { 'progress' } },
+				lualine_y = { 'branch', 'filetype', 'fileformat', 'diagnostics' },
 				lualine_z = {
-					{ 'location', separator = { right = '' }, left_padding = 2 },
+					{ 'progress', separator = { right = '' }, left_padding = 2 },
 				},
 			},
 

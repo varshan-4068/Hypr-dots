@@ -17,7 +17,7 @@ return {
 				left_trunc_marker = '',
 				right_trunc_marker = '',
 				diagnostics = true,
-				diagnostics_update_in_insert = false,
+				diagnostics_update_in_insert = true,
 				color_icons = true,
 				show_buffer_icons = true,
 				show_buffer_close_icons = true,

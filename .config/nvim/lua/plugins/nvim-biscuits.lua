@@ -7,7 +7,7 @@ return {
 			toggle_keybind = "<leader>b",
 			show_on_start = false,
 			vim.cmd [[ 
-				colorscheme catppuccin-mocha
+				colorscheme catppuccin
 				highlight BiscuitColor guifg=#c0c0c0 gui=italic
 			]]
 		})
