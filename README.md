@@ -1,7 +1,7 @@
 
 # *Hypr-dots*
 
-![](../Pictures/system.png)
+![system](https://github.com/user-attachments/assets/5fd6b565-079f-4dde-baff-9133086b67d4)
 
 To Install my Dotfiles,etc Run the commands below....
 
