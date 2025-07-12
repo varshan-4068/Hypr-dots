@@ -1,46 +1,38 @@
 format = """
-$username\
-[](bg:#9C9C9C fg:#7E7E7E bold)\
+[░▒▓](#a3aed2)\
+[  ](bg:#9C9C9C fg:#000000)\
+[](bg:#7E7E7E fg:#9C9C9C)\
 $directory\
-[](bg:#3cb371 fg:#9C9C9C bold)\
+[](fg:#7E7E7E bg:#3cb371)\
 $git_branch\
-[](bg:#00008b fg:#3cb371 bold)\
+[](fg:#3cb371 bg:#00008b)\
 $git_status\
-[](bg:#ff0371 fg:#00008b  bold)\
+[](fg:#00008b bg:#ff0371)\
 $time\
-[ ](fg:#ff0371)\
-"""
-command_timeout = 5000
-
-add_newline = true
-
-[username]
-show_always = true
-style_user = "bg:#7E7E7E fg:#000000 bold"
-style_root = "bg:#7E7E7E fg:#000000 bold"
-format = ' [ $user]($style)'
+[ ](fg:#ff0371)\
+\n$character"""
 
 [directory]
-style = "bg:#9C9C9C fg:#000000 bold"
+style = "fg:#000000 bg:#7E7E7E bold"
 format = "[ $path ]($style)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
+"Downloads" = " "
+"Music" = " "
 "Pictures" = " "
 
 [git_branch]
 symbol = ""
-style = "bg:#3cb371 fg:#000000 bold"
+style = "fg:#000000 bg:#3cb371 bold "
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#00008b  fg:#000000 bold"
-format = '[ $all_status$ahead_behind ]($style)'
+style = "fg:#000000 bg:#00008b bold"
+format = '[( $all_status$ahead_behind )]($style)'
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#ff0371 fg:#000000 bold"
+time_format = "%R" 
+style = "fg:#000000 bg:#ff0371 bold"
 format = '[ $time ]($style)'
-
