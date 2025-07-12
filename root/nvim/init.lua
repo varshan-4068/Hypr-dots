@@ -47,7 +47,6 @@ require("lazy").setup({
 	require("plugins.typr"),
 	require("plugins.color"),
 	require("plugins.auto-save"),
-	require("plugins.img-paste"),
 	require("plugins.md-render"),
 	require("plugins.urlview"),
 	require("plugins.nvim-biscuits"),

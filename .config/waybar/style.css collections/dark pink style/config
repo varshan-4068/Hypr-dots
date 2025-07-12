@@ -129,7 +129,7 @@
         },
         "format-full": "Charged ",
         "interval": 5,
-				"on-click": "alacritty -e bash -ic 'clear; battop'"
+				"on-click": "kitty bash -ic 'clear; battop'"
     },
     
     "custom/power": {
@@ -163,7 +163,7 @@
         "device": "{}",
 				"exec": "ls /sys/class/backlight",
         "format": "{percent}% {icon}",
-				"tooltip-format": "Brightness",
+				"tooltip-format": "Brightness: {}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
 				"on-click": "alacritty -e bash -ic 'clear; brightnessctl ; sleep 4 ; exit' && notify-send -t 4000 'Keep Your Brightness Level Between 20 to 30 to Save The Battery Life For Nearly 4 Hours'"
     },

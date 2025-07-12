@@ -57,8 +57,10 @@ while true;do
 case "$qemu" in
   [yes]*)
 		echo 
+		sudo pacman -S libvirt qemu-full --needed
 		systemctl enable libvirtd 
 		systemctl start libvirtd 
+		sudo usermod -aG libvirt "$(whoami)"
 		break
 		;;
 	[no]*)

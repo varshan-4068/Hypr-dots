@@ -1,14 +1,17 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
 * {
-    font: "cantarell bold 13";
+	font: "Jetbrains Mono Bold 11";
 }
 
 configuration {
     modi: "drun,filebrowser,run";
-		display-drun:                "";
-    display-filebrowser:         "";
-    display-run:              "";
+		display-drun: "Apps";
+    display-filebrowser: "Files";
+    display-run: "Process";
     show-icons: true;
     hover-select:true;
+		location : 0;
 }
 
 imagebox {
@@ -21,27 +24,28 @@ imagebox {
 		border-radius: 4px;
 }
 
+dummy {
+		background-color: transparent;
+}
+
 mode-switcher {
     padding: 10px;
 		spacing: 10px;
-    background-color: #000000;
-		text-color: #f38ba8;
-		border: 3px solid;
-		border-color: #000000;
-		border-radius: 3px;
+    background-color: transparent;
+		text-color: @foreground;
 }
 
 button {
 		cursor: pointer;
     border-radius:  2px;
 		padding:15px;
-    background-color: #000000;
-    text-color:#cdd6f4;
+    background-color: @background;
+    text-color: @foreground;
 }
 
 button selected {
-    background-color: #cdd6f4;
-    text-color: #000000;
+    background-color: @foreground;
+    text-color: @background;
 }
 
 listbox {
@@ -65,8 +69,8 @@ listview {
 
 scrollbar{
 		background-color: #000000;
-		text-color: #cdd6f4;
-		handle-color: #cdd6f4;
+		text-color: @foreground;
+		handle-color: @foreground;
 		handle-width: 8px;
 }
 
@@ -74,8 +78,9 @@ window {
     width:900px;
     border-radius: 10px;
 		border: 1px solid;
-		border-color: #cdd6f4;
+		border-color: @urgent-background;
     background-color: #000000CC;
+		padding: 0px;
 }
 
 inputbar {
@@ -83,8 +88,8 @@ inputbar {
     spacing: 10px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #000000;
-    text-color:  #000000;
+    background-color: @background;
+    text-color:  @background;
     children:[ "textbox-prompt-colon", "entry" ];
 }
 
@@ -97,10 +102,10 @@ textbox-prompt-colon {
 
 entry {
 		enabled: true;
-    text-color:                  #cdd6f4;
+    text-color:                  @foreground;
     cursor:                      text;
     placeholder:                 "Search";
-    placeholder-color:           #cdd6f4;
+    placeholder-color:           @foreground;
 }
 
 mainbox {
@@ -121,27 +126,27 @@ element {
 
 element normal.normal {
 	background-color: transparent;
-	text-color: #cdd6f4;
+	text-color: @foreground;
 }
 
 element alternate.normal {
-	text-color: #cdd6f4;
+	text-color: @foreground;
 	background-color: transparent;
 }
 
 element selected.active {
-	background-color: transparent;
-	text-color: #cdd6f4;
+	background-color: @urgent-background;
+	text-color: @background;
 	border-radius: 2px;
 	border: 4px;
 	border-color: #000000;
 }
 
 element selected.normal {
-	background-color: #000000;
-	text-color: #cdd6f4;
+	background-color: @urgent-background;
+	text-color: @background;
 	border-radius: 2px;
-	border-color: #cdd6f4;
+	border-color: @background;
 	border: 1px solid;
 }
 

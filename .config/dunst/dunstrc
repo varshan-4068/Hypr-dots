@@ -2,9 +2,9 @@
 [global]
     monitor = 0
     follow = none
-    width = 300 
+    width = 400
     height = (55,350)
-    origin = top-right
+    origin = top-center
     offset = (10, 50)
     scale = 1.5
     notification_limit = 400
@@ -22,12 +22,12 @@
     padding = 10 
     horizontal_padding = 5 
     text_icon_padding = 0
-    frame_width = 5
+    frame_width = 3
     frame_color = "#000000"
     gap_size = 0
     separator_color = frame
     sort = yes
-    font = jetbrains mono nerd font 10
+    font = jetbrains mono nerd font 9
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -44,11 +44,9 @@
     icon_position = left
     min_icon_size = 35
     max_icon_size = 130
-    icon_path = /home/arch/Documents/linux.png
     sticky_history = yes
     history_length = 20
-    dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/xdg-open
+    browser = /usr/bin/qutebrowser
     always_run_script = true
     title = Dunst
     class = Dunst
@@ -64,20 +62,20 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#f38ba8"
+    background = "#cdd6f4"
     foreground = "#000000"
     timeout = 15
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#f38ba8"
+    background = "#cdd6f4"
     foreground = "#000000"
     timeout = 15
     override_pause_level = 30
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#f38ba8"
+    background = "#cdd6f4"
     foreground = "#000000"
     timeout = 15
     override_pause_level = 60

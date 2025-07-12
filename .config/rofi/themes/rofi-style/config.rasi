@@ -63,7 +63,7 @@ window {
     width:400px;
     border-radius: 5px;
 		border : 1px solid; 
-		border-color : @foreground;
+		border-color : @urgent-background;
     background-color: transparent;
     padding: 0px;
 }

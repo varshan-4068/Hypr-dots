@@ -1,9 +1,9 @@
 format = """
-[░▒▓](#a3aed2)\
-[  ](bg:#9C9C9C fg:#000000)\
-[](bg:#7E7E7E fg:#9C9C9C)\
+[░▒▓](#7E7E7E)\
+[  ](bg:#7E7E7E fg:#000000)\
+[](bg:#9C9C9C fg:#7E7E7E)\
 $directory\
-[](fg:#7E7E7E bg:#3cb371)\
+[](fg:#9C9C9C bg:#3cb371)\
 $git_branch\
 [](fg:#3cb371 bg:#00008b)\
 $git_status\
@@ -13,7 +13,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#000000 bg:#7E7E7E bold"
+style = "fg:#000000 bg:#9C9C9C bold"
 format = "[ $path ]($style)"
 
 [directory.substitutions]

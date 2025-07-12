@@ -67,11 +67,6 @@
             "type": "brightness"
         },
         {
-            "key": "│ {#36}󰩟 network {#keys}│",
-            "type": "localip",
-            "format": "{ipv4} ({ifname})"
-        },
-        {
             "key": "├───────────┤",
             "type": "custom"
         },
