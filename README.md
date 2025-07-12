@@ -1,7 +1,7 @@
 
 # *Hypr-dots*
 
-![system](https://github.com/user-attachments/assets/5fd6b565-079f-4dde-baff-9133086b67d4)
+![](../Pictures/system.png)
 
 To Install my Dotfiles,etc Run the commands below....
 
@@ -30,90 +30,6 @@ These were my Configuration Files With Graphite Themed GTK Setup....
 > *Try to have your packages up to date to prevent any breakages..*
 >
 
-# *Dotfiles Repo Structure
-
-.
-├── conf
-│   ├── pacman.conf
-│   └── spotify-launcher.conf
-├── gtk
-│   ├── gtk-3.0
-│   │   └── settings.ini
-│   ├── gtk-4.0
-│   │   ├── assets -> /home/arch/.themes/gtk-master/gtk-4.0/assets
-│   │   ├── gtk.css -> /usr/share/themes/Graphite-Dark/gtk-4.0/gtk.css
-│   │   ├── gtk-dark.css -> /usr/share/themes/Graphite-Dark/gtk-4.0/gtk-dark.css
-│   │   └── settings.ini
-│   └── nwg-look
-│       └── config
-├── install.sh
-├── LICENSE
-├── mybash
-│   └── starship.toml
-├── README.md
-├── root
-│   ├── alacritty
-│   │   ├── alacritty.toml
-│   │   └── colors.toml -> /home/arch/.cache/wal/colors-alacritty.toml
-│   ├── nvim
-│   │   ├── init.lua
-│   │   ├── lazy-lock.json
-│   │   └── lua
-│   │       ├── core
-│   │       │   ├── keymaps.lua
-│   │       │   └── options.lua
-│   │       └── plugins
-│   │           ├── alpha.lua
-│   │           ├── autocompletion.lua
-│   │           ├── autopairs.lua
-│   │           ├── auto-save.lua
-│   │           ├── bufferline.lua
-│   │           ├── catppuccin.lua
-│   │           ├── color.lua
-│   │           ├── comment.lua
-│   │           ├── formatting.lua
-│   │           ├── indent.lua
-│   │           ├── linting.lua
-│   │           ├── lsp.lua
-│   │           ├── lualine.lua
-│   │           ├── mason-tool.lua
-│   │           ├── md-render.lua
-│   │           ├── neo-tree.lua
-│   │           ├── nvim-biscuits.lua
-│   │           ├── nvim-surround.lua
-│   │           ├── telescope.lua
-│   │           ├── treesitter.lua
-│   │           ├── typr.lua
-│   │           ├── urlview.lua
-│   │           ├── vim-illuminate.lua
-│   │           └── vim-tmux-navigator.lua
-│   └── starship.toml
-├── sddm
-│   ├── sddm.conf
-│   └── sddm-theme
-│       ├── Main.qml
-│       ├── rl.png
-│       └── theme.conf
-└── src
-    ├── ani-cli.sh
-    ├── aur.sh
-    ├── backup.sh
-    ├── cpufreq.sh
-    ├── dotfiles.sh
-    ├── grub.sh
-    ├── icon.sh
-    ├── pacman.sh
-    ├── print_logo.sh
-    ├── reboot.sh
-    ├── restore.sh
-    ├── rofi-power-menu
-    ├── root.sh
-    ├── sddm.sh
-    ├── systemservice.sh
-    ├── ufw.sh
-    └── waybar.sh
-
-16 directories, 64 files
 
 # *Keybindings*
 
