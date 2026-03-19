@@ -19,10 +19,13 @@ EOF
 clear
 tools
 
-select=$(echo -e "Security Check\nPassword Generator\nMetasploitable2\nLearn and Code\nAbout\nBack\nQuit" | gum choose --header="Select the tool: ")
+select=$(echo -e "Security Check\nPassword Generator\nMetasploitable2\nLearn and Code\nAi Tools\nAbout\nBack\nQuit" | gum choose --header="Select the tool: ")
 tool=~/.config/hypr/menu/tools
 
 case "$select" in
+	'Ai Tools')
+		sh $tool/ai.sh
+		;;
 	'Security Check')
 		sudo sh $tool/check.sh
 		sh $tool/../tools.sh

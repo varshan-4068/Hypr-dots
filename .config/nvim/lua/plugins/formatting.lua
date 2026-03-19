@@ -12,6 +12,10 @@ return {
 				typescript = { "prettier" },
 				cpp = { "clang-format" },
 				bash = { "shfmt" },
+				rust = { "rustfmt" },
+				s = { "asmfmt" },
+ 				asm  = { "asmfmt" },
+ 				nasm  = { "asmfmt" },
 			},
 		})
 

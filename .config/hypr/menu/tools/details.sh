@@ -4,7 +4,12 @@ color7="$(tput setaf 7)"
 
 clear
 
-function whatsmyip () {
+function installed_on(){
+	date_installed=$(head -n1 /var/log/pacman.log | awk '{print $1}' | cut -d 'T' -f1 | cut -d '[' -f2)
+	echo -en "[+] ${color1}Installed on: ${color2}$date_installed\n\n${color7}"
+}
+
+function whatsmyip() {
     if command -v ip &> /dev/null; then
         echo -n "[+] ${color1}Internal IP: ${color2}"
 				interface=$(ip route | grep '^default' | awk '{print $5}')
@@ -19,6 +24,8 @@ function host(){
 	echo -e "\n${color7}[+] ${color1}Hostname:${color2} $(hostname)${color7}"
 	echo -e "\n[+] ${color1}Host Ip: ${color2}$(hostname -i | tr ' ' ' - ')${color7}"
 }
+
+installed_on
 
 whatsmyip
 

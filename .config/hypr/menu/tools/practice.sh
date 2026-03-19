@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-select=$(echo -e "TryHackMe\nHackTheBox\nChatGPT\nArch Wiki\nLeetCode\nHackerRank\nCodeChef\nBack\nQuit"| gum choose --header="Learn From: ")
+select=$(echo -e "TryHackMe\nHackTheBox\nArch Wiki\nLeetCode\nHackerRank\nCodeChef\nBack\nQuit"| gum choose --header="Learn From: ")
 
 launch() {
 	setsid brave --app="$1" >"$HOME/.cache/brave-launch.log" 2>&1 &
@@ -15,9 +15,6 @@ case "$select" in
 		;;
 	HackTheBox)
 		launch https://academy.hackthebox.com/dashboard/
-		;;
-	ChatGPT)
-		launch https://chatgpt.com
 		;;
 	'Arch Wiki')
 		launch https://wiki.archlinux.org/title/Arch_Linux

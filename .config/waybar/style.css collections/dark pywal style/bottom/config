@@ -1,9 +1,9 @@
 {
     "layer": "bottom",
     "position": "bottom",
-		"margin-bottom": 10,
-    "margin-left": 18,
-    "margin-right": 18,
+		"margin-top": 10,
+    "margin-left": 38,
+    "margin-right": 38,
 
 
     "modules-left": ["custom/logo","hyprland/workspaces","group/tray_row",],
@@ -47,7 +47,7 @@
         "interval": 5,
 				"format": "<span color='#800000'> </span> {used:0.1f} GB",
 				"tooltip": true,
-				"on-click": "kitty btop",
+				"on-click": "alacritty -e btop",
 				"tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
     },
 

@@ -7,6 +7,8 @@ return {
 		lint.linters_by_ft = {
 			python = { "pylint" },
 			html = { "htmlhint" },
+			rust = { "clippy" },
+			sql = { "sqlfluff" },
 		}
 
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
@@ -14,6 +16,18 @@ return {
 				lint.try_lint()
 			end,
 		})
+
+		lint.linters.clippy = {
+			cmd = "cargo",
+			args = {
+				"clippy",
+				"--message-format=json",
+			},
+			stdin = false,
+			stream = "stdout",
+			ignore_exitcode = true,
+			parser = lint.linters.clippy.parser,
+		}
 
 		vim.diagnostic.config({
 			virtual_text = true,

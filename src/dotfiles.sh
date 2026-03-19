@@ -31,7 +31,7 @@ install_dots() {
 	case "$dot" in
 
 	yes)
-		wallpaper=~/.config/backgrounds/Batman.png
+		wallpaper=~/.config/backgrounds/gracile.png
 		conf=~/.config
 		usr=/usr/bin
 		bash=mybash/

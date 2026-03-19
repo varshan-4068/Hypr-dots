@@ -11,7 +11,6 @@
     indicate_hidden = yes
     separator_height = 3 
     padding = 10
-		transparency = 50
     horizontal_padding = 5
     frame_width = 2
     frame_color = "#cdd6f4"
@@ -51,20 +50,20 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#000000CC"
+    background = "#000000DD"
     foreground = "#ffffff"
     timeout = 15
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#000000CC"
+    background = "#000000DD"
     foreground = "#ffffff"
     timeout = 15
     override_pause_level = 30
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#000000CC"
+    background = "#000000DD"
     foreground = "#ffffff"
     timeout = 15
     override_pause_level = 60

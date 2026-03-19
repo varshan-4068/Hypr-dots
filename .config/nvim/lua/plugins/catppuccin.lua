@@ -92,7 +92,7 @@ return {
 		})
 		vim.api.nvim_create_autocmd('ColorScheme', {
 			callback = function()
-				vim.cmd [[highlight Visual guibg=#ff6666 guifg=#000000]]
+				vim.cmd [[highlight Visual guibg=#cdd6f4 guifg=#000000]]
 			end,
 		})
 	end

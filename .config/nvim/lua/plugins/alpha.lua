@@ -22,8 +22,16 @@ return {
 				"⣿⣿⣿⣿⣿⣿⠿⠁⠀⠀⠀⠘⣤⣭⣟⠛⠛⣉⣁⡜⠀⠀⠀⠀⠀⠛⠿⣿⣿⣿",
 				"⡿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⡀⠀⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉",
 				" 														 ",
-				"         Ethical Hacker       ",
+				"    Reverse Engineer 1's 0's   ",
 		}
+
+		dashboard.section.header.opts.hl = "MyHeaderHighlight"
+
+		vim.api.nvim_set_hl(0, "MyHeaderHighlight", {
+			fg = "#c0c0c0",
+			bg = "NONE",
+			bold = true,
+		})
 
 		dashboard.section.buttons.val = {
 			dashboard.button("e", "📄  New file", ":ene <BAR>startinsert<CR>"),
